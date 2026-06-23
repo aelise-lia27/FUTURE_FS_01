@@ -223,7 +223,7 @@ const PROJECTS_DATABASE: Record<number, Project> = {
     skillsGained: ["Introduction aux mécaniques de l'IoT et aux protocoles asynchrones", "Gestion de flux NoSQL de haute réactivité (Firestore Streams)", "Sécurisation de transactions financières"],
     year: "2024",
     status: "MVP fonctionnel testé en simulation",
-    mainImage: "https://picsum.photos/seed/distripay/800/500",
+    mainImage: "/src/images/distripay/product.PNG",
     objectives: [
       "Concevoir un écosystème de commandes sans contact interconnectant application mobile Android/iOS, cloud et distributeur physique.",
       "Prévenir la surcharge de commandes simultanées de stocks limités en gérant des transactions atomiques sécurisées.",
@@ -236,19 +236,19 @@ const PROJECTS_DATABASE: Record<number, Project> = {
     ],
     gallery: [
       {
-        url: "https://picsum.photos/seed/distripay/800/500",
-        title: "Borne connectée & Solde Client",
-        description: "Schématique montrant la synergie entre le mobile en dématérialisé et l'appareil physique connecté."
+        url: "/src/images/distriPay/login.PNG",
+        title: "",
+        description: ""
       },
       {
-        url: "https://picsum.photos/seed/distrilogs/800/500",
-        title: "Flux logs de validation IoT",
-        description: "Console simulant les impulsions PWM transmises au microcontrôleur matériel au format d'événement unifié."
+        url: "/src/images/distriPay/register.PNG",
+        title: "",
+        description: ""
       },
       {
-        url: "https://picsum.photos/seed/distriwallet/800/500",
-        title: "Rechargement de crédit mobile",
-        description: "Interface sécurisée permettant à l'étudiant d'approvisionner son solde virtuel interne en monnaie FCFA."
+        url: "/src/images/distriPay/achat.PNG",
+        title: "",
+        description: ""
       }
     ]
   },
