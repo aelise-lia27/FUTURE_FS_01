@@ -1,0 +1,2519 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      AGBANAN AMENUVEVE ELISE | Développeur d'Applications Web & Mobile
+    </title>
+    <!-- Gogle Fonts included dynamically -->
+    <link rel="icon" type="image/png" href="/src/profile/profile.png" />
+    <script type="module" crossorigin src="/&lt;REPO&gt;/assets/index-CteAdCwm.js"></script>
+    <link rel="stylesheet" crossorigin href="/&lt;REPO&gt;/assets/index-Bg1gGvbG.css">
+  </head>
+  <body
+    class="bg-brand-dark text-slate-100 font-sans antialiased min-h-screen selection:bg-brand-blue selection:text-white tech-glow overflow-x-hidden"
+  >
+    <!-- NAVIGATION BAR -->
+    <header
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex items-center justify-between h-16 sm:h-20 border-b border-white/[0.04] glass-panel rounded-b-2xl px-4 sm:px-8"
+        >
+          <!-- Logo/Branding -->
+          <a
+            href="#hero"
+            class="flex items-center space-x-3 group"
+            id="nav-logo"
+          >
+            <div
+              class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-blue to-blue-400 flex items-center justify-center font-display font-bold text-white shadow-lg shadow-brand-blue/20 group-hover:scale-105 transition-all"
+            >
+              AE
+            </div>
+            <div class="hidden sm:block">
+              <span
+                class="block font-display font-bold text-sm tracking-wide text-white group-hover:text-brand-blue transition-colors"
+                >AGBANAN ELISE</span
+              >
+              <span
+                class="block text-[10px] text-slate-400 font-mono tracking-wider uppercase"
+                >L2 Informatique</span
+              >
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <nav class="hidden md:flex space-x-1" id="nav-menu">
+            <a
+              href="#hero"
+              class="px-3 py-2 rounded-lg text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.03] transition-all"
+              >Accueil</a
+            >
+            <a
+              href="#about"
+              class="px-3 py-2 rounded-lg text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.03] transition-all"
+              >À Propos</a
+            >
+            <a
+              href="#skills"
+              class="px-3 py-2 rounded-lg text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.03] transition-all"
+              >Compétences</a
+            >
+            <a
+              href="#projects"
+              class="px-3 py-2 rounded-lg text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.03] transition-all"
+              >Projets</a
+            >
+            <a
+              href="#extra"
+              class="px-3 py-2 rounded-lg text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.03] transition-all"
+              >Profil Extra</a
+            >
+            <a
+              href="#education"
+              class="px-3 py-2 rounded-lg text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.03] transition-all"
+              >Formation</a
+            >
+          </nav>
+
+          <!-- Call to Action Buttons -->
+          <div class="hidden md:flex items-center space-x-4">
+            <a
+              href="https://github.com/aelise-lia27"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-slate-400 hover:text-white transition-colors"
+              id="nav-github"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <a
+              href="#contact"
+              class="px-4 py-2 rounded-xl bg-brand-blue text-xs font-semibold text-white hover:bg-blue-600 active:scale-95 transition-all shadow-lg shadow-brand-blue/20"
+              id="nav-cta"
+            >
+              Me contacter
+            </a>
+          </div>
+
+          <!-- Mobile Menu Controller -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden p-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all"
+            aria-label="Menu principal"
+          >
+            <svg
+              id="menu-icon-open"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+            <svg
+              id="menu-icon-close"
+              class="w-6 h-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div
+        id="mobile-drawer"
+        class="md:hidden hidden absolute top-20 left-0 w-full px-4 z-40"
+      >
+        <div
+          class="rounded-2xl glass-panel p-4 flex flex-col space-y-2 border border-white/[0.05] shadow-2xl"
+        >
+          <a
+            href="#hero"
+            class="mobile-link px-4 py-3 rounded-xl text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/[0.04] transition-all"
+            >Accueil</a
+          >
+          <a
+            href="#about"
+            class="mobile-link px-4 py-3 rounded-xl text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/[0.04] transition-all"
+            >À Propos</a
+          >
+          <a
+            href="#skills"
+            class="mobile-link px-4 py-3 rounded-xl text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/[0.04] transition-all"
+            >Compétences</a
+          >
+          <a
+            href="#projects"
+            class="mobile-link px-4 py-3 rounded-xl text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/[0.04] transition-all"
+            >Projets</a
+          >
+          <a
+            href="#extra"
+            class="mobile-link px-4 py-3 rounded-xl text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/[0.04] transition-all"
+            >Profil Extra</a
+          >
+          <a
+            href="#education"
+            class="mobile-link px-4 py-3 rounded-xl text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/[0.04] transition-all"
+            >Formation</a
+          >
+          <div class="h-[1px] bg-white/[0.05] my-2"></div>
+          <div class="flex items-center justify-between pt-2">
+            <a
+              href="https://github.com/aelise-lia27"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center space-x-2 text-slate-400 hover:text-white px-4 py-2"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-xs font-mono">GitHub Profile</span>
+            </a>
+            <a
+              href="#contact"
+              class="mobile-link px-4 py-2 rounded-xl bg-brand-blue text-xs font-semibold text-white shadow"
+              id="mobile-cta-btn"
+            >
+              Me contacter
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-24 overflow-visible"
+    >
+      <!-- HERO SECTION -->
+      <section
+        id="hero"
+        class="py-12 sm:py-20 lg:py-28 relative flex flex-col lg:grid lg:grid-cols-12 gap-12 items-center"
+      >
+        <!-- Left Hero Column -->
+        <div
+          class="lg:col-span-7 flex flex-col space-y-6 sm:space-y-8 text-left"
+        >
+          <!-- Availability Badge -->
+          <div
+            class="inline-flex self-start items-center space-x-2 bg-brand-blue/10 border border-brand-blue/30 rounded-full px-4 py-1.5"
+            id="hero-badge"
+          >
+            <span
+              class="w-2.5 h-2.5 rounded-full bg-brand-teal animate-pulse"
+            ></span>
+            <span
+              class="text-[11px] sm:text-xs font-bold tracking-wide uppercase text-blue-400 font-mono"
+              >Disponible pour Stage &amp; Freelance</span
+            >
+          </div>
+
+          <!-- Name & Title -->
+          <!-- Photo professionnelle + Name & Title -->
+          <div class="flex items-start space-x-6">
+            <img
+              id="profile-photo"
+              src="/%3CREPO%3E/assets/profile-DXgmeRFe.png"
+              alt="Photo professionnelle d'Agbanan Elise"
+              class="profile-photo w-24 h-24 sm:w-40 sm:h-40 lg:w-60 lg:h-60 rounded-full object-cover border-4 border-white/[0.06] shadow-lg"
+            />
+
+            <div class="space-y-3" id="hero-title-group">
+              <h1
+                class="text-xs sm:text-sm font-bold font-mono tracking-widest text-[#60a5fa] uppercase"
+              >
+                AGBANAN AMENUVEVE ELISE
+              </h1>
+              <p
+                class="text-xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.1] tracking-tight text-white"
+              >
+                Développeur d'Applications <br class="hidden sm:inline" />
+                <span class="text-gradient-accent">Web &amp; Mobile</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- High-quality Bio -->
+          <p
+            class="text-sm sm:text-base text-slate-300 text-justify max-w-2xl leading-relaxed font-sans"
+            id="hero-summary"
+          >
+            Étudiant en deuxième année de licence informatique, spécialité
+            développement d'applications, passionné par la conception de
+            solutions numériques web et mobile. Expérience pratique à travers
+            plusieurs projets en Flutter, PHP, WordPress et Firebase, incluant
+            des MVP et plateformes web professionnelles. Rigoureux, autonome et
+            orienté résolution de problèmes, Je souhaite intégrer une entreprise
+            dynamique afin de contribuer à des projets web concrets et renforcer
+            mes compétences techniques.
+          </p>
+
+          <!-- Core Call to Actions -->
+          <div
+            class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-2"
+            id="hero-ctas"
+          >
+            <a
+              href="#projects"
+              class="px-6 py-3.5 rounded-xl bg-brand-blue text-xs font-bold text-white hover:bg-blue-600 text-center transition-all shadow-lg shadow-brand-blue/20 flex items-center justify-center space-x-2"
+            >
+              <span>Voir mes projets</span>
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
+              </svg>
+            </a>
+
+            <!-- CV Download Button (direct download pointing to /cv.pdf) -->
+            <a
+              id="cv-btn"
+              href="/cv.pdf"
+              download="CV_AGBANAN_ELISE.pdf"
+              class="px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold hover:bg-slate-800 hover:text-white transition-all flex items-center justify-center space-x-2 cursor-pointer"
+            >
+              <svg
+                class="w-4 h-4 text-brand-blue"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"
+                ></path>
+              </svg>
+              <span>Télécharger mon CV</span>
+            </a>
+
+            <a
+              href="#contact"
+              class="px-6 py-3.5 rounded-xl text-slate-400 hover:text-white text-xs font-bold text-center transition-all flex items-center justify-center space-x-1"
+            >
+              <span>Me contacter</span>
+            </a>
+          </div>
+
+          <!-- Quick Metrics Panel (Adds immediate student-developer credibility) -->
+          <div
+            class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/[0.04]"
+            id="hero-metrics"
+          >
+            <div
+              class="p-3 rounded-xl bg-white/[0.01] border border-white/[0.02]"
+            >
+              <span class="block text-2xl font-bold font-display text-white"
+                >5</span
+              >
+              <span
+                class="block text-[10px] text-slate-400 uppercase font-bold tracking-wider pt-0.5"
+                >Projets réalisés</span
+              >
+            </div>
+            <div
+              class="p-3 rounded-xl bg-white/[0.01] border border-white/[0.02]"
+            >
+              <span class="block text-2xl font-bold font-display text-[#60a5fa]"
+                >2+</span
+              >
+              <span
+                class="block text-[10px] text-slate-400 uppercase font-bold tracking-wider pt-0.5"
+                >Années d'études</span
+              >
+            </div>
+            <div
+              class="p-3 rounded-xl bg-white/[0.01] border border-white/[0.02]"
+            >
+              <span class="block text-2xl font-bold font-display text-white"
+                >L2</span
+              >
+              <span
+                class="block text-[10px] text-slate-400 uppercase font-bold tracking-wider pt-0.5"
+                >Licence ESIG</span
+              >
+            </div>
+            <!-- <div class="p-3 rounded-xl bg-white/[0.01] border border-white/[0.02]">
+              <div class="flex items-center space-x-1">
+                <span class="font-display font-medium text-xs text-white">FR</span>
+                <span class="text-slate-500 font-mono text-[9px]">/</span>
+                <span class="font-display font-medium text-xs text-slate-400">EN</span>
+              </div>
+              <span class="block text-[10px] text-slate-400 uppercase font-bold tracking-wider pt-1.5">Bilingue</span>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- Right Hero Column (Aesthetic custom terminal dashboard) -->
+        <div
+          class="lg:col-span-5 w-full flex items-center justify-center mt-6 lg:mt-0"
+          id="hero-graphic-panel"
+        >
+          <div
+            class="w-full max-w-sm rounded-2xl border border-white/[0.06] bg-slate-900/60 p-5 shadow-2xl relative overflow-hidden group hover:border-brand-blue/20 transition-all duration-500"
+          >
+            <!-- Glass gloss effect -->
+            <div
+              class="absolute inset-x-0 top-0 h-[100px] bg-gradient-to-b from-brand-blue/5 to-transparent pointer-events-none"
+            ></div>
+
+            <!-- Terminal Header -->
+            <div
+              class="flex items-center justify-between pb-4 border-b border-white/[0.04]"
+            >
+              <div class="flex items-center space-x-2">
+                <span class="w-3 h-3 rounded-full bg-red-400/80"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-400/80"></span>
+                <span class="w-3 h-3 rounded-full bg-green-400/80"></span>
+              </div>
+              <span
+                class="text-[10px] font-mono text-slate-400 flex items-center gap-1.5"
+              >
+                <span
+                  class="w-1.5 h-1.5 rounded-full bg-brand-blue animate-ping"
+                ></span>
+                agbanan_profile.dart
+              </span>
+            </div>
+
+            <!-- Terminal Body -->
+            <div
+              class="pt-4 font-mono text-xs text-left space-y-3 relative overflow-x-auto min-h-[260px] select-all"
+            >
+              <div>
+                <span class="text-blue-400">class</span>
+                <span class="text-teal-300">Developer</span> {
+              </div>
+              <div class="pl-4">
+                <span class="text-slate-400">final</span>
+                <span class="text-blue-400">String</span>
+                <span class="text-slate-200">name</span> =
+                <span class="text-emerald-400">"Agbanan Elise"</span>;
+              </div>
+              <div class="pl-4">
+                <span class="text-slate-400">final</span>
+                <span class="text-blue-400">String</span>
+                <span class="text-slate-200">location</span> =
+                <span class="text-emerald-400">"Lomé, Togo"</span>;
+              </div>
+              <div class="pl-4">
+                <span class="text-slate-400">final</span>
+                <span class="text-blue-400">List&lt;String&gt;</span>
+                <span class="text-slate-200">specialties</span> = [
+              </div>
+              <div class="pl-8">
+                <span class="text-emerald-400">"Flutter (Mobile)"</span>,
+                <span class="text-emerald-400">"PHP/Laravel (Backend)"</span>,
+                <span class="text-emerald-400">"UX/UI"</span>
+              </div>
+              <div class="pl-4">];</div>
+              <div class="pl-4 text-slate-500">
+                // Intérêt professionnel prononcé pour des solutions concrètes
+              </div>
+              <div class="pl-4">
+                <span class="text-slate-400">bool</span>
+                <span class="text-slate-200">readyForStage</span> =
+                <span class="text-amber-400">true</span>;
+              </div>
+              <div class="pl-4">
+                <span class="text-slate-400">bool</span>
+                <span class="text-slate-200">openToFreelance</span> =
+                <span class="text-amber-400">true</span>;
+              </div>
+              <div class="pl-4 pt-1">
+                <span class="text-slate-400">void</span>
+                <span class="text-blue-300">solveProblem</span>() {
+              </div>
+              <div class="pl-8 text-slate-300">
+                <span class="text-blue-400">if</span> (projectStatus ==
+                <span class="text-emerald-400">"complex"</span>) {
+              </div>
+              <div class="pl-12 text-slate-400">stayStructured();</div>
+              <div class="pl-12 text-slate-400">deliverProductionReady();</div>
+              <div class="pl-8 text-slate-300">}</div>
+              <div class="pl-4">}</div>
+              <div>}</div>
+            </div>
+
+            <!-- Terminal Footer -->
+            <div
+              class="mt-4 pt-3 border-t border-white/[0.04] text-[10px] font-mono text-slate-500 flex justify-between"
+            >
+              <span>SYS STATUS</span>
+              <span class="text-slate-400 font-bold">READY_TO_BUILD</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION (BENTO GRID STYLE - Highly original, avoiding clichés) -->
+      <section id="about" class="py-16 sm:py-24 border-t border-white/[0.04]">
+        <!-- Header -->
+        <div
+          class="flex flex-col space-y-2 mb-12 text-left"
+          id="about-heading-group"
+        >
+          <span
+            class="text-xs uppercase font-bold tracking-widest font-mono text-brand-blue"
+            >01 / Storytelling</span
+          >
+          <h2
+            class="text-2xl sm:text-3.5xl font-extrabold font-display text-white"
+          >
+            À Propos De Moi &amp; Vision
+          </h2>
+        </div>
+
+        <!-- Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6" id="about-bento">
+          <!-- Bento Box 1: Core Story (Large) -->
+          <div
+            class="md:col-span-8 p-6 sm:p-8 rounded-2xl border border-white/[0.05] bg-slate-900/40 relative overflow-hidden flex flex-col justify-between group hover:border-brand-blue/20 transition-all duration-300"
+          >
+            <div class="space-y-4">
+              <span
+                class="text-brand-blue font-mono text-xs uppercase tracking-wider font-semibold block"
+                >Mon Parcours &amp; Ambitions</span
+              >
+              <h3 class="text-xl font-bold text-white font-display">
+                Créer des produits robustes dotés d'un intérêt métier fort
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed font-sans">
+                Actuellement en deuxième année de licence en développement
+                d'applications à l'<strong>ESIG Global Success</strong>,
+                j'aborde l'informatique avec une perspective très axée sur le
+                projet réel. Loin d'un apprentissage purement théorique, je
+                m'applique à concevoir des architectures complètes, qu'elles
+                soient mobiles ou web.
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed font-sans">
+                Mon approche met l'accent sur la
+                <strong
+                  >rigueur, la structure administrative et la modularité</strong
+                >. J'adore analyser un problème d'organisation ou de gestion et
+                le traduire en une interface intuitive et un backend sain. C'est
+                ce pont entre la logique métier et l'expérience utilisateur
+                finale qui me passionne.
+              </p>
+            </div>
+
+            <div
+              class="flex items-center space-x-3 pt-6 text-xs font-mono text-slate-400"
+            >
+              <span
+                class="px-2 py-1 rounded bg-[#1e293b] border border-white/[0.05] text-[#93c5fd]"
+                >#EspritProjet</span
+              >
+              <span
+                class="px-2 py-1 rounded bg-[#1e293b] border border-white/[0.05] text-[#93c5fd]"
+                >#Autonome</span
+              >
+              <span
+                class="px-2 py-1 rounded bg-[#1e293b] border border-white/[0.05] text-[#93c5fd]"
+                >#Rigueur</span
+              >
+            </div>
+          </div>
+
+          <!-- Bento Box 2: Location/Localisation (Small) -->
+          <div
+            class="md:col-span-4 p-6 rounded-2xl border border-white/[0.05] bg-slate-900/40 relative overflow-hidden flex flex-col justify-between hover:border-brand-blue/20 transition-all duration-300"
+          >
+            <div class="space-y-2">
+              <span
+                class="text-slate-400 font-mono text-xs uppercase tracking-wider font-semibold block"
+                >Localisation de base</span
+              >
+              <h3 class="text-lg font-bold text-white font-display">
+                Lomé, Togo
+              </h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Connecté à l'écosystème africain de la tech. Disponible pour un
+                stage localement ou pour des projets freelance n'importe où dans
+                le monde en distanciel.
+              </p>
+            </div>
+
+            <!-- Lomé Mini Graphic / Coordinate mapping to show seriousness -->
+            <div class="pt-6 relative">
+              <div class="text-[10px] font-mono text-slate-500 space-y-1">
+                <div>COORD : 6.1372° N, 1.2125° E</div>
+                <div>FUSEAU : UTC +00:00</div>
+              </div>
+              <div
+                class="w-full h-24 mt-4 bg-slate-950/80 rounded-xl relative overflow-hidden flex items-center justify-center border border-white/[0.03]"
+              >
+                <!-- Abstract stylized blue map overlay -->
+                <div
+                  class="absolute inset-0 opacity-15 bg-[radial-gradient(#1e3a8a_1px,transparent_1px)] [background-size:16px_16px]"
+                ></div>
+                <!-- Interactive Pulse over Lomé mapping -->
+                <div class="relative flex items-center justify-center">
+                  <div
+                    class="w-4 h-4 rounded-full bg-brand-blue animate-ping opacity-60"
+                  ></div>
+                  <div
+                    class="absolute w-2.5 h-2.5 rounded-full bg-brand-blue"
+                  ></div>
+                </div>
+                <span
+                  class="absolute bottom-2 right-2 text-[9px] text-slate-500 font-mono"
+                  >LOMÉ METROPOLIS</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Box 3: Languages/Bilingual (Small Width) -->
+          <div
+            class="md:col-span-4 p-6 rounded-2xl border border-white/[0.05] bg-slate-900/40 hover:border-brand-blue/20 transition-all duration-300 flex flex-col justify-between"
+          >
+            <div>
+              <span
+                class="text-slate-400 font-mono text-xs uppercase tracking-wider font-semibold block"
+                >Langues
+              </span>
+            </div>
+
+            <div class="space-y-4">
+              <!-- French -->
+              <div class="space-y-1">
+                <div class="flex justify-between text-xs font-mono">
+                  <span class="text-slate-300 font-bold">Français</span>
+                  <span class="text-teal-400 font-bold"
+                    >C2 (Langue maternelle)</span
+                  >
+                </div>
+                <div
+                  class="w-full h-1.5 bg-slate-950 rounded-full overflow-hidden"
+                >
+                  <div class="h-full bg-teal-400 w-full rounded-full"></div>
+                </div>
+              </div>
+
+              <!-- English -->
+              <div class="space-y-1">
+                <div class="flex justify-between text-xs font-mono">
+                  <span class="text-slate-300 font-bold">Anglais</span>
+                  <span class="text-brand-blue font-bold"
+                    >A2 (Notions professionnelles)</span
+                  >
+                </div>
+                <div
+                  class="w-full h-1.5 bg-slate-950 rounded-full overflow-hidden"
+                >
+                  <div class="h-full bg-brand-blue w-[40%] rounded-full"></div>
+                </div>
+              </div>
+            </div>
+
+            <p
+              class="text-[10px] text-slate-400 font-sans leading-relaxed mt-4 pt-1 border-t border-white/[0.02]"
+            >
+              Compréhension basique de l’anglais technique, lecture simple de
+              documentation et capacité à communiquer avec des phrases courtes.
+            </p>
+          </div>
+
+          <!-- Bento Box 4: Entrepreneurial Mentality (Medium Width) -->
+          <div
+            class="md:col-span-8 p-6 sm:p-8 rounded-2xl border border-white/[0.05] bg-slate-900/40 relative overflow-hidden hover:border-brand-blue/20 transition-all duration-300 flex flex-col justify-between"
+          >
+            <div class="space-y-3">
+              <span
+                class="text-slate-400 font-mono text-xs uppercase tracking-wider font-semibold block"
+                >Esprit Entrepreneurial</span
+              >
+              <h3 class="text-xl font-bold text-white font-display">
+                L'expérience de terrain comme moteur technique
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed font-sans">
+                Mon tempérament pragmatique se nourrit d'activités
+                complémentaires d'entrepreneuriat et d'organisation. Qu'il
+                s'agisse de gérer de la logistique de vente ou de diriger des
+                chantiers organisationnels, j'applique les mêmes fondamentaux au
+                code : s'adapter, écouter précisément le besoin utilisateur,
+                rationaliser les ressources, et respecter les délais impartis.
+                Un bon logiciel est avant tout un logiciel qui fonctionne et
+                résout un cas d'usage factuel.
+              </p>
+            </div>
+
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6 border-t border-white/[0.03] text-left"
+            >
+              <div>
+                <span
+                  class="block text-brand-blue text-xs font-mono font-bold uppercase tracking-wide"
+                  >STAGE VISÉ</span
+                >
+                <span class="block text-slate-200 text-xs mt-1"
+                  >Conception &amp; Intégration</span
+                >
+              </div>
+              <div>
+                <span
+                  class="block text-[#14b8a6] text-xs font-mono font-bold uppercase tracking-wide"
+                  >FREELANCE PRO</span
+                >
+                <span class="block text-slate-200 text-xs mt-1"
+                  >Plateformes &amp; MVPs</span
+                >
+              </div>
+              <div class="col-span-2 sm:col-span-1">
+                <span
+                  class="block text-amber-500 text-xs font-mono font-bold uppercase tracking-wide"
+                  >COOPÉRATION</span
+                >
+                <span class="block text-slate-200 text-xs mt-1"
+                  >Modulaire &amp; Agilité</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECHNICAL SKILLS SECTION -->
+      <section id="skills" class="py-16 sm:py-24 border-t border-white/[0.04]">
+        <!-- Header -->
+        <div
+          class="flex flex-col space-y-2 mb-12 text-left"
+          id="skills-heading-group"
+        >
+          <span
+            class="text-xs uppercase font-bold tracking-widest font-mono text-brand-blue"
+            >02 / Expertise</span
+          >
+          <h2
+            class="text-2xl sm:text-3.5xl font-extrabold font-display text-white"
+          >
+            Compétences Techniques
+          </h2>
+          <p class="text-sm text-slate-400 max-w-2xl font-sans">
+            Des fondations académiques solides à l'ESIG alliées à un
+            perfectionnement pratique autonome sur des projets opérationnels.
+          </p>
+        </div>
+
+        <!-- Skills Filter Tabs (Interactive) -->
+        <div
+          class="flex flex-wrap gap-2 mb-8 bg-slate-950/60 p-1.5 rounded-2xl border border-white/[0.04] max-w-lg"
+          id="skills-filter-container"
+        >
+          <button
+            data-skill-tab="all"
+            class="skill-tab-btn flex-1 min-w-[80px] text-center px-3 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer bg-brand-blue text-white"
+          >
+            Tous
+          </button>
+          <button
+            data-skill-tab="web"
+            class="skill-tab-btn flex-1 min-w-[100px] text-center px-3 py-2 text-xs font-bold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-white/[0.02]"
+          >
+            Dév Web
+          </button>
+          <button
+            data-skill-tab="mobile"
+            class="skill-tab-btn flex-1 min-w-[100px] text-center px-3 py-2 text-xs font-bold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-white/[0.02]"
+          >
+            Dév Mobile
+          </button>
+          <button
+            data-skill-tab="backend"
+            class="skill-tab-btn flex-1 min-w-[100px] text-center px-3 py-2 text-xs font-bold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-white/[0.02]"
+          >
+            Backend &amp; DB
+          </button>
+          <button
+            data-skill-tab="tools"
+            class="skill-tab-btn flex-1 min-w-[100px] text-center px-3 py-2 text-xs font-bold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-white/[0.02]"
+          >
+            Outils
+          </button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          id="skills-grid"
+        >
+          <!-- Skill Category: Langages -->
+          <div
+            class="skill-card-block p-5 rounded-2xl border border-white/[0.05] bg-slate-900/10 hover:border-brand-blue/10 hover:bg-slate-900/30 transition-all group"
+            data-skill-cat="web"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-xl bg-violet-500/15 flex items-center justify-center text-violet-400 group-hover:scale-110 transition-transform"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-white font-display">
+                  Langages de Programmation
+                </h3>
+                <span
+                  class="text-[9px] text-slate-400 uppercase font-mono tracking-wider"
+                  >Académiques &amp; Pratiques</span
+                >
+              </div>
+            </div>
+
+            <div class="space-y-3 pt-2">
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300"
+                  >JavaScript
+                  <span class="text-[9px] text-slate-500 font-mono"
+                    >(ES6)</span
+                  ></span
+                >
+                <span class="text-emerald-400 font-mono text-[10px]"
+                  >Maîtrise - Dom APIs</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300"
+                  >PHP
+                  <span class="text-[9px] text-slate-500 font-mono"
+                    >(Objet)</span
+                  ></span
+                >
+                <span class="text-emerald-400 font-mono text-[10px]"
+                  >Maîtrise - MVC</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">Dart</span>
+                <span class="text-brand-blue font-mono text-[10px]"
+                  >Pratique - Flutter</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">Python</span>
+                <span class="text-brand-blue font-mono text-[10px]"
+                  >Pratique</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold col-span-2"
+              >
+                <span class="text-slate-300">Java &amp; C</span>
+                <span class="text-slate-400 font-mono text-[10px]"
+                  >Académique</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category: Dév Web -->
+          <div
+            class="skill-card-block p-5 rounded-2xl border border-white/[0.05] bg-slate-900/10 hover:border-brand-blue/10 hover:bg-slate-900/30 transition-all group"
+            data-skill-cat="web"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-xl bg-orange-500/15 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-white font-display">
+                  Développement Web
+                </h3>
+                <span
+                  class="text-[9px] text-slate-400 uppercase font-mono tracking-wider"
+                  >Normes &amp; CMS</span
+                >
+              </div>
+            </div>
+
+            <div class="space-y-3 pt-2">
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">HTML5 &amp; CSS3</span>
+                <span class="text-emerald-400 font-mono text-[10px]"
+                  >Sémantique - Responsive</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">WordPress &amp; Elementor</span>
+                <span class="text-emerald-400 font-mono text-[10px]"
+                  >Autonomie complète</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">Laravel</span>
+                <span class="text-amber-500 font-mono text-[10px]"
+                  >Pratique (Bases solidifiees)</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category: Dév Mobile -->
+          <div
+            class="skill-card-block p-5 rounded-2xl border border-white/[0.05] bg-slate-900/10 hover:border-brand-blue/10 hover:bg-slate-900/30 transition-all group"
+            data-skill-cat="mobile"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-xl bg-blue-500/15 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-white font-display">
+                  Développement Mobile
+                </h3>
+                <span
+                  class="text-[9px] text-slate-400 uppercase font-mono tracking-wider"
+                  >Multiplateforme</span
+                >
+              </div>
+            </div>
+
+            <div class="space-y-3 pt-2">
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">Flutter</span>
+                <span class="text-emerald-400 font-mono text-[10px]"
+                  >Maîtrise - Gestion d'États</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">Interfaçage Matériel</span>
+                <span class="text-brand-blue font-mono text-[10px]"
+                  >Simulation ESP32</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">Architecture Clean</span>
+                <span class="text-slate-400 font-mono text-[10px]"
+                  >MVC &amp; Singleton patterns</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category: Backend & Databases -->
+          <div
+            class="skill-card-block p-5 rounded-2xl border border-white/[0.05] bg-slate-900/10 hover:border-brand-blue/10 hover:bg-slate-900/30 transition-all group"
+            data-skill-cat="backend"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-xl bg-pink-500/15 flex items-center justify-center text-pink-400 group-hover:scale-110 transition-transform"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-white font-display">
+                  Persistance &amp; Backend
+                </h3>
+                <span
+                  class="text-[9px] text-slate-400 uppercase font-mono tracking-wider"
+                  >NoSQL &amp; Relational</span
+                >
+              </div>
+            </div>
+
+            <div class="space-y-3 pt-2">
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">Firebase Auth &amp; Storage</span>
+                <span class="text-emerald-400 font-mono text-[10px]"
+                  >Maîtrise - Sécurisation</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">Cloud Firestore</span>
+                <span class="text-emerald-400 font-mono text-[10px]"
+                  >Base Real-time</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">MySQL &amp; XAMPP</span>
+                <span class="text-emerald-400 font-mono text-[10px]"
+                  >Conception Merise / UML</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category: Réseaux & Systèmes -->
+          <div
+            class="skill-card-block p-5 rounded-2xl border border-white/[0.05] bg-slate-900/10 hover:border-brand-blue/10 hover:bg-slate-900/30 transition-all group"
+            data-skill-cat="tools"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-xl bg-teal-500/15 flex items-center justify-center text-teal-400 group-hover:scale-110 transition-transform"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-white font-display">
+                  Infrastructures &amp; Réseaux
+                </h3>
+                <span
+                  class="text-[9px] text-slate-400 uppercase font-mono tracking-wider"
+                  >Topologies &amp; Routages</span
+                >
+              </div>
+            </div>
+
+            <div class="space-y-3 pt-2">
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">Cisco Packet Tracer</span>
+                <span class="text-brand-blue font-mono text-[10px]"
+                  >Simulation &amp; Routage</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">Bases Réseaux</span>
+                <span class="text-[#14b8a6] font-mono text-[10px]"
+                  >Modèles OSI / TCP-IP</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">Adressage IP v4/v6</span>
+                <span class="text-emerald-400 font-mono text-[10px]"
+                  >Sous-réseaux (VLSM)</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category: Outils de productivité -->
+          <div
+            class="skill-card-block p-5 rounded-2xl border border-white/[0.05] bg-slate-900/10 hover:border-brand-blue/10 hover:bg-slate-900/30 transition-all group"
+            data-skill-cat="tools"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-xl bg-emerald-500/15 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-white font-display">
+                  Méthodologies &amp; Écosystème
+                </h3>
+                <span
+                  class="text-[9px] text-slate-400 uppercase font-mono tracking-wider"
+                  >Outils Pros &amp; Collaboratifs</span
+                >
+              </div>
+            </div>
+
+            <div class="space-y-3 pt-2">
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">Git &amp; GitHub Workflow</span>
+                <span class="text-emerald-400 font-mono text-[10px]"
+                  >Contrôle de Version</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300">UML &amp; Modélisation</span>
+                <span class="text-emerald-400 font-mono text-[10px]"
+                  >Cahier des charges</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center bg-white/[0.02] border border-white/[0.03] p-2 rounded-xl text-xs font-semibold"
+              >
+                <span class="text-slate-300"
+                  >ClickUp, Notion &amp; Workspace</span
+                >
+                <span class="text-brand-blue font-mono text-[10px]"
+                  >Suivi Agile</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACTIVE DETAILED PROJECTS SECTION -->
+      <section
+        id="projects"
+        class="py-16 sm:py-24 border-t border-white/[0.04]"
+      >
+        <!-- Header -->
+        <div
+          class="flex flex-col space-y-2 mb-12 text-left"
+          id="projects-heading-group"
+        >
+          <span
+            class="text-xs uppercase font-bold tracking-widest font-mono text-brand-blue"
+            >03 / Réalisations</span
+          >
+          <h2
+            class="text-2xl sm:text-3.5xl font-extrabold font-display text-white"
+          >
+            Projets Opérationnels
+          </h2>
+          <p class="text-sm text-slate-400 max-w-2xl font-sans">
+            Des applications vivantes basées sur des cas réels ou industriels.
+            Cliquez sur un projet pour inspecter l'étude de cas, les verrous
+            techniques levés et mon rôle exact.
+          </p>
+        </div>
+
+        <!-- Portfolio Filtering -->
+        <div
+          class="flex flex-wrap gap-2 mb-8 bg-slate-950/60 p-1.5 rounded-2xl border border-white/[0.04] max-w-md"
+          id="projects-filter-container"
+        >
+          <button
+            data-project-filter="all"
+            class="portfolio-filter-btn flex-1 text-center px-3 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer bg-brand-blue text-white"
+          >
+            Tous
+          </button>
+          <button
+            data-project-filter="client"
+            class="portfolio-filter-btn flex-1 text-center px-3 py-2 text-xs font-bold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-white/[0.02]"
+          >
+            Clients réels
+          </button>
+          <button
+            data-project-filter="mobile"
+            class="portfolio-filter-btn flex-1 text-center px-3 py-2 text-xs font-bold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-white/[0.02]"
+          >
+            Mobile
+          </button>
+          <button
+            data-project-filter="web"
+            class="portfolio-filter-btn flex-1 text-center px-3 py-2 text-xs font-bold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-white/[0.02]"
+          >
+            Web PHP
+          </button>
+        </div>
+
+        <!-- Project Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          id="projects-grid"
+        >
+          <!-- PROJECT 1: Wellness Thérapie -->
+          <div
+            class="project-portfolio-card flex flex-col justify-between bg-slate-900/30 border border-white/[0.05] rounded-2xl p-5 hover:border-brand-blue/30 hover:bg-slate-900/60 transition-all duration-300 group"
+            data-[#project-cat]="client web"
+          >
+            <div class="space-y-4">
+              <!-- Visual Mockup Holder -->
+              <div
+                class="w-full h-48 rounded-xl relative overflow-hidden border border-white/[0.08] group-hover:border-brand-blue/30 transition-colors duration-300"
+              >
+                <img
+                  src="/%3CREPO%3E/assets/wellnessTherapie-BcUzJSGy.PNG"
+                  alt="Wellness Thérapie - Capture d'écran"
+                  class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  referrerpolicy="no-referrer"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"
+                ></div>
+                <div
+                  class="absolute bottom-3 left-3 bg-emerald-950/70 border border-emerald-500/30 text-[9px] px-2 py-0.5 rounded text-emerald-300 font-mono backdrop-blur-sm"
+                >
+                  CLIENT RÉEL
+                </div>
+              </div>
+
+              <!-- Main Card Info -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-[10px] font-mono text-[#10b981] font-bold uppercase tracking-wider"
+                    >WordPress CMS &amp; Web PHP</span
+                  >
+                  <span class="text-[10px] font-mono text-slate-500">2024</span>
+                </div>
+                <h3
+                  class="text-base font-extrabold font-display text-white group-hover:text-brand-blue transition-colors"
+                >
+                  Wellness Thérapie
+                </h3>
+                <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                  Création complète d'un site web professionnel pour un cabinet
+                  de kinésithérapie basé à Lomé. Gère de manière autonome
+                  l'image de marque du cabinet, la prise de rendez-vous en ligne
+                  et le SEO local.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="pt-5 mt-4 border-t border-white/[0.04] flex items-center justify-between"
+            >
+              <div class="flex flex-wrap gap-1">
+                <span
+                  class="text-[9px] font-mono bg-white/[0.03] text-slate-300 px-1.5 py-0.5 rounded"
+                  >WordPress</span
+                >
+                <span
+                  class="text-[9px] font-mono bg-white/[0.03] text-slate-300 px-1.5 py-0.5 rounded"
+                  >PHP / CSS</span
+                >
+              </div>
+              <button
+                class="open-project-modal-btn text-xs font-bold text-brand-blue hover:text-blue-400 flex items-center gap-1 cursor-pointer"
+                data-project-idx="1"
+              >
+                Étude de cas
+                <svg
+                  class="w-3.5 h-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: Dinease -->
+          <div
+            class="project-portfolio-card flex flex-col justify-between bg-slate-900/30 border border-white/[0.05] rounded-2xl p-5 hover:border-brand-blue/30 hover:bg-slate-900/60 transition-all duration-300 group"
+            data-[#project-cat]="mobile"
+          >
+            <div class="space-y-4">
+              <!-- Visual Mockup Holder -->
+              <div
+                class="w-full h-48 rounded-xl relative overflow-hidden border border-white/[0.08] group-hover:border-brand-blue/30 transition-colors duration-300"
+              >
+                <img
+                  src="/%3CREPO%3E/assets/dinease-BxjQ40PA.jpeg"
+                  alt="DinEase - Capture d'écran"
+                  class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  referrerpolicy="no-referrer"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"
+                ></div>
+                <div
+                  class="absolute bottom-3 left-3 bg-brand-blue/20 border border-brand-blue/35 text-[9px] px-2 py-0.5 rounded text-blue-300 font-mono backdrop-blur-sm"
+                >
+                  ENTREPRENEURIAL (MVP)
+                </div>
+              </div>
+
+              <!-- Main Card Info -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-[10px] font-mono text-brand-blue font-bold uppercase tracking-wider"
+                    >Mobile Flutter &amp; Firestore</span
+                  >
+                  <span class="text-[10px] font-mono text-slate-500">2024</span>
+                </div>
+                <h3
+                  class="text-base font-extrabold font-display text-white group-hover:text-brand-blue transition-colors"
+                >
+                  DinEase
+                </h3>
+                <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                  MVP d'une application mobile innovante permettant de localiser
+                  les restaurants et maquis à Lomé selon le budget exact de
+                  l'utilisateur. Conçu dans un esprit de startup groupe.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="pt-5 mt-4 border-t border-white/[0.04] flex items-center justify-between"
+            >
+              <div class="flex flex-wrap gap-1">
+                <span
+                  class="text-[9px] font-mono bg-white/[0.03] text-slate-300 px-1.5 py-0.5 rounded"
+                  >Flutter / Dart</span
+                >
+                <span
+                  class="text-[9px] font-mono bg-white/[0.03] text-slate-300 px-1.5 py-0.5 rounded"
+                  >NoSQL Firestore</span
+                >
+              </div>
+              <button
+                class="open-project-modal-btn text-xs font-bold text-brand-blue hover:text-blue-400 flex items-center gap-1 cursor-pointer"
+                data-project-idx="2"
+              >
+                Étude de cas
+                <svg
+                  class="w-3.5 h-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: Building (MVC Platform) -->
+          <div
+            class="project-portfolio-card flex flex-col justify-between bg-slate-900/30 border border-white/[0.05] rounded-2xl p-5 hover:border-brand-blue/30 hover:bg-slate-900/60 transition-all duration-300 group"
+            data-[#project-cat]="web"
+          >
+            <div class="space-y-4">
+              <!-- Visual Mockup Holder -->
+              <div
+                class="w-full h-48 rounded-xl relative overflow-hidden border border-white/[0.08] group-hover:border-brand-blue/30 transition-colors duration-300"
+              >
+                <img
+                  src="/%3CREPO%3E/assets/building-Bgd1QRvA.PNG"
+                  alt="Platform Building - Capture d'écran"
+                  class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  referrerpolicy="no-referrer"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"
+                ></div>
+                <div
+                  class="absolute bottom-3 left-3 bg-cyan-950/60 border border-cyan-500/30 text-[9px] px-2 py-0.5 rounded text-cyan-300 font-mono backdrop-blur-sm"
+                >
+                  ACADÉMIQUE CONCRÈTE
+                </div>
+              </div>
+
+              <!-- Main Card Info -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-[10px] font-mono text-cyan-400 font-bold uppercase tracking-wider"
+                    >Web PHP MVC &amp; MySQL</span
+                  >
+                  <span class="text-[10px] font-mono text-slate-500">2024</span>
+                </div>
+                <h3
+                  class="text-base font-extrabold font-display text-white group-hover:text-brand-blue transition-colors"
+                >
+                  Platform BUILDING
+                </h3>
+                <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                  Plateforme web de location et vente de matériel de
+                  construction et d'annonces immobilières. Développée selon un
+                  système MVC maison hautement robuste en PHP et requêtes AJAX
+                  asynchrones.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="pt-5 mt-4 border-t border-white/[0.04] flex items-center justify-between"
+            >
+              <div class="flex flex-wrap gap-1">
+                <span
+                  class="text-[9px] font-mono bg-white/[0.03] text-slate-300 px-1.5 py-0.5 rounded"
+                  >PHP MVC</span
+                >
+                <span
+                  class="text-[9px] font-mono bg-white/[0.03] text-slate-300 px-1.5 py-0.5 rounded"
+                  >AJAX / MYSQL</span
+                >
+              </div>
+              <button
+                class="open-project-modal-btn text-xs font-bold text-brand-blue hover:text-blue-400 flex items-center gap-1 cursor-pointer"
+                data-project-idx="3"
+              >
+                Étude de cas
+                <svg
+                  class="w-3.5 h-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- PROJECT 4: Distripay (IoT App) -->
+          <div
+            class="project-portfolio-card flex flex-col justify-between bg-slate-900/30 border border-white/[0.05] rounded-2xl p-5 hover:border-brand-blue/30 hover:bg-slate-900/60 transition-all duration-300 group"
+            data-[#project-cat]="mobile"
+          >
+            <div class="space-y-4">
+              <!-- Visual Mockup Holder -->
+              <div
+                class="w-full h-48 rounded-xl relative overflow-hidden border border-white/[0.08] group-hover:border-brand-blue/30 transition-colors duration-300"
+              >
+                <img
+                  src="/%3CREPO%3E/assets/product2-mkzFa7az.PNG"
+                  alt="DistriPay - Capture d'écran"
+                  class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  referrerpolicy="no-referrer"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"
+                ></div>
+                <div
+                  class="absolute bottom-3 left-3 bg-indigo-950/60 border border-indigo-500/30 text-[9px] px-2 py-0.5 rounded text-indigo-300 font-mono backdrop-blur-sm"
+                >
+                  OBJETS CONNECTÉS (IoT)
+                </div>
+              </div>
+
+              <!-- Main Card Info -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-[10px] font-mono text-indigo-400 font-bold uppercase tracking-wider"
+                    >Mobile Flutter &amp; ESP32 IoT</span
+                  >
+                  <span class="text-[10px] font-mono text-slate-500">2024</span>
+                </div>
+                <h3
+                  class="text-base font-extrabold font-display text-white group-hover:text-brand-blue transition-colors"
+                >
+                  DistriPay
+                </h3>
+                <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                  Application mobile révolutionnaire connectée à un distributeur
+                  automatique intelligent, permettant l'achat, l'historique et
+                  la distribution automatisée d'articles en direct via NoSQL.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="pt-5 mt-4 border-t border-white/[0.04] flex items-center justify-between"
+            >
+              <div class="flex flex-wrap gap-1">
+                <span
+                  class="text-[9px] font-mono bg-white/[0.03] text-slate-300 px-1.5 py-0.5 rounded"
+                  >Flutter</span
+                >
+                <span
+                  class="text-[9px] font-mono bg-white/[0.03] text-slate-300 px-1.5 py-0.5 rounded"
+                  >Firebase Real-time</span
+                >
+              </div>
+              <button
+                class="open-project-modal-btn text-xs font-bold text-brand-blue hover:text-blue-400 flex items-center gap-1 cursor-pointer"
+                data-project-idx="4"
+              >
+                Étude de cas
+                <svg
+                  class="w-3.5 h-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- PROJECT 5: Lavage Auto Pro -->
+          <div
+            class="project-portfolio-card flex flex-col justify-between bg-slate-900/30 border border-white/[0.05] rounded-2xl p-5 hover:border-brand-blue/30 hover:bg-slate-900/60 transition-all duration-300 group"
+            data-[#project-cat]="web"
+          >
+            <div class="space-y-4">
+              <!-- Visual Mockup Holder -->
+              <div
+                class="w-full h-48 rounded-xl relative overflow-hidden border border-white/[0.08] group-hover:border-brand-blue/30 transition-colors duration-300"
+              >
+                <img
+                  src="/%3CREPO%3E/assets/home-CSOzGgb2.PNG"
+                  alt="Lavage Auto Pro - Capture d'écran"
+                  class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  referrerpolicy="no-referrer"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"
+                ></div>
+                <div
+                  class="absolute bottom-3 left-3 bg-slate-900 border border-white/[0.08] text-[9px] px-2 py-0.5 rounded text-slate-400 font-mono backdrop-blur-sm"
+                >
+                  PORTFOLIO ACADÉMIQUE
+                </div>
+              </div>
+
+              <!-- Main Card Info -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-[10px] font-mono text-slate-300 font-bold uppercase tracking-wider"
+                    >Web PHP &amp; JavaScript Native</span
+                  >
+                  <span class="text-[10px] font-mono text-slate-500">2024</span>
+                </div>
+                <h3
+                  class="text-base font-extrabold font-display text-white group-hover:text-brand-blue transition-colors"
+                >
+                  Lavage Auto Pro
+                </h3>
+                <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                  Solution web complète de gestion opérationnelle et financière
+                  pour une entreprise de station de lavage ou d'entretien
+                  automobile (Wash Auto). Gestion des tickets clients et
+                  encaissements.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="pt-5 mt-4 border-t border-white/[0.04] flex items-center justify-between"
+            >
+              <div class="flex flex-wrap gap-1">
+                <span
+                  class="text-[9px] font-mono bg-white/[0.03] text-slate-300 px-1.5 py-0.5 rounded"
+                  >PHP / MySQL</span
+                >
+                <span
+                  class="text-[9px] font-mono bg-white/[0.03] text-slate-300 px-1.5 py-0.5 rounded"
+                  >Native JavaScript</span
+                >
+              </div>
+              <button
+                class="open-project-modal-btn text-xs font-bold text-brand-blue hover:text-blue-400 flex items-center gap-1 cursor-pointer"
+                data-project-idx="5"
+              >
+                Étude de cas
+                <svg
+                  class="w-3.5 h-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DETAILED PROJECTS STUDY MODAL (Dynamically populated via Vanilla JS) -->
+      <div
+        id="project-detail-modal"
+        class="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4 bg-brand-dark/90 backdrop-blur-md hidden"
+      >
+        <div
+          class="relative w-full max-w-5xl rounded-3xl border border-white/[0.08] bg-slate-950/95 shadow-2xl p-4 sm:p-6 md:p-10 max-h-[90vh] overflow-y-auto"
+          role="dialog"
+          aria-modal="true"
+        >
+          <!-- Close Button -->
+          <button
+            id="close-modal-btn"
+            class="absolute top-4 right-4 p-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/[0.04]"
+            aria-label="Fermer le dialogue"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Dynamic Content Container -->
+          <div id="modal-content" class="space-y-6 pt-2">
+            <!-- Populated dynamically through JavaScript in main.tsx -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ADDITIONAL EXPERIENCE & LEADER PROFILE (Crucial to stand out from regular students) -->
+      <section id="extra" class="py-16 sm:py-24 border-t border-white/[0.04]">
+        <!-- Header -->
+        <div
+          class="flex flex-col space-y-2 mb-12 text-left"
+          id="extra-heading-group"
+        >
+          <span
+            class="text-xs uppercase font-bold tracking-widest font-mono text-brand-blue"
+            >04 / Soft Skills de Terrain</span
+          >
+          <h2
+            class="text-2xl sm:text-3.5xl font-extrabold font-display text-white"
+          >
+            Profil Extra-professionnel &amp; Leadership
+          </h2>
+          <p class="text-sm text-slate-400 max-w-2xl font-sans">
+            Comment des initiatives bénévoles, une passion pour l'organisation
+            collective et une rigueur logistique me confèrent des compétences
+            directes de chef de projet agile.
+          </p>
+        </div>
+
+        <!-- Vertical grid of experiences mapping onto soft skills -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-6"
+          id="extra-experiences-grid"
+        >
+          <!-- Skill: Management/Leadership -->
+          <div
+            class="p-6 rounded-2xl border border-white/[0.05] bg-slate-900/10 hover:border-brand-blue/10 transition-all flex flex-col justify-between"
+          >
+            <div class="space-y-3">
+              <div class="flex justify-between items-start">
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded bg-brand-blue/10 border border-brand-blue/20 text-[10px] font-mono text-blue-400 font-bold uppercase"
+                  >Direction &amp; Coordination</span
+                >
+                <span class="text-xs font-mono text-slate-500"
+                  >Activités Communitaires</span
+                >
+              </div>
+              <h3 class="text-base font-extrabold font-display text-white">
+                Leader de Groupe de Décoration Événementielle (Église)
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed font-sans">
+                Organisation intégrale d'idées de conception d'espaces,
+                arbitrage de budgets d'achat logistique et management actif
+                d'une équipe de collaborateurs bénévoles lors des grandes messes
+                événementielles chrétiennes.
+              </p>
+            </div>
+
+            <div
+              class="mt-4 pt-4 border-t border-white/[0.02] flex items-center space-x-2 text-[10px] text-teal-400 font-mono"
+            >
+              <span
+                class="px-2 py-0.5 rounded bg-teal-400/5 border border-teal-400/10"
+                >Gestion des équipes</span
+              >
+              <span
+                class="px-2 py-0.5 rounded bg-teal-400/5 border border-teal-400/10"
+                >Contrôle des coûts</span
+              >
+              <span
+                class="px-2 py-0.5 rounded bg-teal-400/5 border border-teal-400/10"
+                >Planification agile</span
+              >
+            </div>
+          </div>
+
+          <!-- Skill: Communication/bilingual -->
+          <div
+            class="p-6 rounded-2xl border border-white/[0.05] bg-slate-900/10 hover:border-brand-blue/10 transition-all flex flex-col justify-between"
+          >
+            <div class="space-y-3">
+              <div class="flex justify-between items-start">
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-mono text-indigo-400 font-bold uppercase"
+                  >Communication &amp; Pédagogie</span
+                >
+                <span class="text-xs font-mono text-slate-500"
+                  >Moniteur &amp; Interprète</span
+                >
+              </div>
+              <h3 class="text-base font-extrabold font-display text-white">
+                Pédagogue d'Adolescents &amp; Services d'Interprétation
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed font-sans">
+                Responsable du mentorat pédagogique d'adolescents d'église et
+                services d'interprétation linguistique simultanée lors
+                d'allocutions orales d'intervenants extérieurs. Requiert écoute
+                et clarté d'expression.
+              </p>
+            </div>
+
+            <div
+              class="mt-4 pt-4 border-t border-white/[0.02] flex items-center space-x-2 text-[10px] text-[#60a5fa] font-mono"
+            >
+              <span
+                class="px-2 py-0.5 rounded bg-[#3b82f6]/5 border border-[#3b82f6]/10"
+                >Mentorat technique</span
+              >
+              <span
+                class="px-2 py-0.5 rounded bg-[#3b82f6]/5 border border-[#3b82f6]/10"
+                >Traduction rapide</span
+              >
+              <span
+                class="px-2 py-0.5 rounded bg-[#3b82f6]/5 border border-[#3b82f6]/10"
+                >Vulgarisation</span
+              >
+            </div>
+          </div>
+
+          <!-- Skill: Marketing / Business -->
+          <div
+            class="p-6 rounded-2xl border border-white/[0.05] bg-slate-900/10 hover:border-brand-blue/10 transition-all flex flex-col justify-between"
+          >
+            <div class="space-y-3">
+              <div class="flex justify-between items-start">
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded bg-amber-500/10 border border-amber-500/20 text-[10px] font-mono text-amber-400 font-bold uppercase"
+                  >Commerce &amp; Stratégie</span
+                >
+                <span class="text-xs font-mono text-slate-500"
+                  >Commerce Autonome</span
+                >
+              </div>
+              <h3 class="text-base font-extrabold font-display text-white">
+                Entrepreneur Freelance : Vente de Vêtements (Seconde main)
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed font-sans">
+                Déploiement d'une structure informelle de d'approvisionnement,
+                ciblage des collections de vêtements tendance et négociation
+                commerciale directe. Maîtrise complète de la rentabilité de
+                trésorerie financière.
+              </p>
+            </div>
+
+            <div
+              class="mt-4 pt-4 border-t border-white/[0.02] flex items-center space-x-2 text-[10px] text-amber-500 font-mono"
+            >
+              <span
+                class="px-2 py-0.5 rounded bg-amber-500/5 border border-amber-500/10"
+                >Relations clients</span
+              >
+              <span
+                class="px-2 py-0.5 rounded bg-amber-500/5 border border-amber-500/10"
+                >Analyse de tendance</span
+              >
+              <span
+                class="px-2 py-0.5 rounded bg-amber-500/5 border border-amber-500/10"
+                >Fidélisation</span
+              >
+            </div>
+          </div>
+
+          <!-- Skill: Admin / Management process -->
+          <div
+            class="p-6 rounded-2xl border border-white/[0.05] bg-slate-900/10 hover:border-brand-blue/10 transition-all flex flex-col justify-between"
+          >
+            <div class="space-y-3">
+              <div class="flex justify-between items-start">
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded bg-teal-500/10 border border-teal-500/20 text-[10px] font-mono text-teal-400 font-bold uppercase"
+                  >Rigueur Administrative</span
+                >
+                <span class="text-xs font-mono text-slate-500"
+                  >ACM Bénévole</span
+                >
+              </div>
+              <h3 class="text-base font-extrabold font-display text-white">
+                Support Administratif Bénévole — ACM
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed font-sans">
+                Prise de notes, rédaction hebdomadaire ou annuelle des rapports
+                de synthèse et conception graphique des badges
+                d'authentification nominatifs de l'organisation. Un sens aigu de
+                l'exactitude des livrables.
+              </p>
+            </div>
+
+            <div
+              class="mt-4 pt-4 border-t border-white/[0.02] flex items-center space-x-2 text-[10px] text-teal-400 font-mono"
+            >
+              <span
+                class="px-2 py-0.5 rounded bg-teal-400/5 border border-teal-400/10"
+                >Rédaction structurée</span
+              >
+              <span
+                class="px-2 py-0.5 rounded bg-teal-400/5 border border-teal-400/10"
+                >Design Graphique</span
+              >
+              <span
+                class="px-2 py-0.5 rounded bg-teal-400/5 border border-teal-400/10"
+                >Cahier de notes</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRAINING / FORMATION SECTION -->
+      <section
+        id="education"
+        class="py-16 sm:py-24 border-t border-white/[0.04]"
+      >
+        <!-- Header -->
+        <div
+          class="flex flex-col space-y-2 mb-12 text-left"
+          id="education-heading-group"
+        >
+          <span
+            class="text-xs uppercase font-bold tracking-widest font-mono text-brand-blue"
+            >05 / Parcours</span
+          >
+          <h2
+            class="text-2xl sm:text-3.5xl font-extrabold font-display text-white"
+          >
+            Formation Académique
+          </h2>
+        </div>
+
+        <!-- Timeline -->
+        <div
+          class="space-y-8 relative before:absolute before:inset-y-1 before:left-3 sm:before:left-1/2 before:w-[1px] before:bg-white/[0.06]"
+          id="education-timeline"
+        >
+          <!-- Timeline Item 1: L2 ESIG -->
+          <div
+            class="relative flex flex-col sm:flex-row sm:justify-between items-start sm:items-center group"
+            id="edu-item-l2"
+          >
+            <!-- Icon/Marker -->
+            <div
+              class="absolute left-3 sm:left-1/2 -translate-x-1.5 w-3.5 h-3.5 rounded-full bg-brand-blue border-4 border-brand-dark z-10 group-hover:scale-125 transition-transform"
+            ></div>
+
+            <div class="w-full sm:w-[45%] pl-8 sm:pl-0 sm:text-right space-y-1">
+              <span
+                class="inline-flex px-2 py-0.5 rounded bg-brand-blue/10 border border-brand-blue/20 text-[10px] font-mono text-blue-400 font-bold"
+                >2025 – 2026</span
+              >
+              <h3 class="text-base font-extrabold font-display text-white">
+                L2 Développement d’Applications
+              </h3>
+              <p class="text-xs text-brand-blue font-semibold">
+                ESIG Global Success, Lomé
+              </p>
+            </div>
+
+            <div class="hidden sm:block w-[10%]"></div>
+
+            <div class="w-full sm:w-[45%] pl-8 sm:pl-0 pt-2 sm:pt-0">
+              <p
+                class="text-xs text-slate-400 leading-relaxed max-w-sm sm:max-w-none"
+              >
+                Licence d'Ingénierie Logicielle en cours. Modélisation de base
+                de données relationnelle avancee, programmation objet PHP
+                soutient de MVC, initiation au développement des frameworks
+                mobiles et sécurité native.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: L1 ESIG -->
+          <div
+            class="relative flex flex-col sm:flex-row sm:justify-between items-start sm:items-center group"
+            id="edu-item-l1"
+          >
+            <!-- Icon/Marker -->
+            <div
+              class="absolute left-3 sm:left-1/2 -translate-x-1.5 w-3.5 h-3.5 rounded-full bg-[#14b8a6] border-4 border-brand-dark z-10 group-hover:scale-125 transition-transform"
+            ></div>
+
+            <div class="w-full sm:w-[45%] sm:order-2 pl-8 sm:pl-0 space-y-1">
+              <span
+                class="inline-flex px-2 py-0.5 rounded bg-[#14b8a6]/10 border border-[#14b8a6]/20 text-[10px] font-mono text-teal-400 font-bold"
+                >2024 – 2025</span
+              >
+              <h3 class="text-base font-extrabold font-display text-white">
+                L1 Développement d’Applications
+              </h3>
+              <p class="text-xs text-[#14b8a6] font-semibold">
+                ESIG Global Success, Lomé
+              </p>
+            </div>
+
+            <div class="hidden sm:block w-[10%]"></div>
+
+            <div
+              class="w-full sm:w-[45%] sm:order-1 pl-8 sm:pl-0 sm:text-right pt-2 sm:pt-0"
+            >
+              <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                Acquisition des bases solides en algorithmique, structures de
+                données fondamentales en langage C et Java, architecture réseau
+                d'entreprise Cisco et structures HTML5/CSS3/JavaScript web.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3: Bac Scientifique -->
+          <div
+            class="relative flex flex-col sm:flex-row sm:justify-between items-start sm:items-center group"
+            id="edu-item-bac"
+          >
+            <!-- Icon/Marker -->
+            <div
+              class="absolute left-3 sm:left-1/2 -translate-x-1.5 w-3.5 h-3.5 rounded-full bg-slate-500 border-4 border-brand-dark z-10 group-hover:scale-125 transition-transform"
+            ></div>
+
+            <div class="w-full sm:w-[45%] pl-8 sm:pl-0 sm:text-right space-y-1">
+              <span
+                class="inline-flex px-2 py-0.5 rounded bg-slate-500/10 border border-slate-500/20 text-[10px] font-mono text-slate-400 font-bold"
+                >2023 – 2024</span
+              >
+              <h3 class="text-base font-extrabold font-display text-white">
+                Baccalauréat Scientifique (Série D)
+              </h3>
+              <p class="text-xs text-slate-400 font-semibold">
+                CS Le Savoir, Lomé
+              </p>
+            </div>
+
+            <div class="hidden sm:block w-[10%]"></div>
+
+            <div class="w-full sm:w-[45%] pl-8 sm:pl-0 pt-2 sm:pt-0">
+              <p
+                class="text-xs text-slate-400 leading-relaxed max-w-sm sm:max-w-none"
+              >
+                Diplôme scientifique de fin d'études secondaires avec mention.
+                Spécialisation en mathématiques appliquées, physique
+                fondamentale et sciences vivantes. Compétences en démarche
+                scientifique de précision.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONVERSION CONTACT SECTION -->
+      <section
+        id="contact"
+        class="py-16 sm:py-24 border-t border-white/[0.04] relative"
+      >
+        <div
+          class="absolute inset-x-0 bottom-0 h-[200px] bg-gradient-to-t from-brand-blue/5 to-transparent pointer-events-none"
+        ></div>
+
+        <div
+          class="glass-panel rounded-3xl p-6 sm:p-12 border border-white/[0.06] bg-slate-900/40 relative overflow-hidden"
+          id="contact-wrapper"
+        >
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center"
+          >
+            <!-- Left Contact Info -->
+            <div
+              class="lg:col-span-6 space-y-6 sm:space-y-8 text-left"
+              id="contact-details-panel"
+            >
+              <div class="space-y-3">
+                <span
+                  class="text-xs uppercase font-bold tracking-widest font-mono text-[#60a5fa]"
+                  >Disponibilité immédiate</span
+                >
+                <h2
+                  class="text-2xl sm:text-4xl font-extrabold font-display text-white leading-tight"
+                >
+                  Collaborons sur vos projets !
+                </h2>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  Que vous recherchiez un stagiaire structuré, autonome et
+                  orienté projet ou que vous ayez besoin d'un site vitrine, d'un
+                  MVP d'application mobile ou d'une plateforme Web
+                  professionnelle clé en main, parlons-en !
+                </p>
+              </div>
+
+              <!-- Real contact blocks -->
+              <div class="space-y-4 pt-2">
+                <!-- Email -->
+                <div
+                  class="flex items-center space-x-3 group"
+                  id="contact-email-row"
+                >
+                  <div
+                    class="w-10 h-10 rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 00-2 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <span
+                      class="block text-[10px] text-slate-400 uppercase font-mono tracking-wider"
+                      >Adresse Email Professionnelle</span
+                    >
+                    <a
+                      href="mailto:liagbanan@gmail.com"
+                      class="text-sm font-semibold text-white hover:text-brand-blue transition-colors"
+                      >liagbanan@gmail.com</a
+                    >
+                  </div>
+                  <!-- Quick Copy Button -->
+                  <button
+                    id="copy-email-btn"
+                    class="ml-auto p-1.5 rounded-lg bg-white/[0.02] border border-white/[0.05] text-slate-400 hover:text-white hover:bg-white/[0.06] transition-all cursor-pointer text-xs"
+                    title="Copier l'email"
+                  >
+                    Copier
+                  </button>
+                </div>
+                <!-- LinkedIn  -->
+                <div
+                  class="flex items-center space-x-3 group"
+                  id="contact-linkedin-row"
+                >
+                  <div
+                    class="w-10 h-10 rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1s2.5 1.12 2.5 2.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.1c.67-1.27 2.3-2.6 4.73-2.6 5.06 0 6 3.33 6 7.66V24h-5v-7.7c0-1.84-.03-4.2-2.56-4.2-2.57 0-2.96 2-2.96 4.07V24h-5V8z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <span
+                      class="block text-[10px] text-slate-400 uppercase font-mono tracking-wider"
+                    >
+                      Profil LinkedIn
+                    </span>
+
+                    <a
+                      href="https://www.www.linkedin.com/in/liagbdin"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-sm font-semibold text-white hover:text-brand-blue transition-colors"
+                    >
+                      linkedin.com/in/liagbdin
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div
+                  class="flex items-center space-x-3 group"
+                  id="contact-phone-row"
+                >
+                  <div
+                    class="w-10 h-10 rounded-xl bg-[#14b8a6]/10 border border-[#14b8a6]/20 flex items-center justify-center text-[#14b8a6]"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <span
+                      class="block text-[10px] text-slate-400 uppercase font-mono tracking-wider"
+                      >Téléphone &amp; WhatsApp direct</span
+                    >
+                    <a
+                      href="tel:+22890793329"
+                      class="text-sm font-semibold text-white hover:text-brand-blue transition-colors"
+                      >+228 90 79 33 29</a
+                    >
+                  </div>
+                </div>
+
+                <!-- Localization Lomé -->
+                <div class="flex items-center space-x-3" id="contact-loc-row">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      ></path>
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <span
+                      class="block text-[10px] text-slate-400 uppercase font-mono tracking-wider"
+                      >Adresse physique</span
+                    >
+                    <span class="text-sm font-semibold text-white"
+                      >Lomé, Togo</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Message simulation box (Adds professional touch and high visual interface) -->
+            <div class="lg:col-span-6 w-full" id="contact-form-panel">
+              <div
+                class="rounded-2xl border border-white/[0.06] bg-slate-950 p-5 sm:p-6 shadow-xl relative"
+              >
+                <div
+                  class="absolute -top-3 left-4 bg-brand-blue border border-brand-blue/30 text-[9px] px-2.5 py-1 rounded-full text-white font-mono font-bold uppercase tracking-wider"
+                >
+                  Formulaire de Contact rapide
+                </div>
+
+                <form id="contact-form" class="space-y-4 pt-2">
+                  <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-1.5 text-left">
+                      <label
+                        for="form-name"
+                        class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block"
+                        >Votre Nom / Entreprise</label
+                      >
+                      <input
+                        type="text"
+                        id="form-name"
+                        required
+                        placeholder="Ex. Wellness Corp"
+                        class="w-full bg-white/[0.02] border border-white/[0.08] rounded-xl px-3 py-2.5 text-xs text-white placeholder-slate-600 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-all"
+                      />
+                    </div>
+                    <div class="space-y-1.5 text-left">
+                      <label
+                        for="form-contact"
+                        class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block"
+                        >Email / Téléphone</label
+                      >
+                      <input
+                        type="text"
+                        id="form-contact"
+                        required
+                        placeholder="Ex. info@corp.tg"
+                        class="w-full bg-white/[0.02] border border-white/[0.08] rounded-xl px-3 py-2.5 text-xs text-white placeholder-slate-600 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-all"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="space-y-1.5 text-left">
+                    <label
+                      for="form-subject"
+                      class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block"
+                      >Sujet du Message</label
+                    >
+                    <input
+                      type="text"
+                      id="form-subject"
+                      required
+                      placeholder="Ex. Opportunité de stage chez nous"
+                      class="w-full bg-white/[0.02] border border-white/[0.08] rounded-xl px-3 py-2.5 text-xs text-white placeholder-slate-600 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-all"
+                    />
+                  </div>
+
+                  <div class="space-y-1.5 text-left">
+                    <label
+                      for="form-message"
+                      class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block"
+                      >Détails de la demande</label
+                    >
+                    <textarea
+                      id="form-message"
+                      rows="4"
+                      required
+                      placeholder="Décrivez votre besoin ou les modalités de stage proposées..."
+                      class="w-full bg-white/[0.02] border border-white/[0.08] rounded-xl px-3 py-2.5 text-xs text-white placeholder-slate-600 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-all resize-none"
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    id="form-submit-btn"
+                    class="w-full py-3 rounded-xl bg-brand-blue hover:bg-blue-600 text-xs font-bold text-white transition-all shadow-lg shadow-brand-blue/25 outline-none cursor-pointer"
+                  >
+                    Envoyer ma demande
+                  </button>
+                </form>
+
+                <!-- Feedback Area -->
+                <div
+                  id="form-feedback"
+                  class="mt-3 p-2.5 rounded-xl text-center text-xs font-semibold hidden"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FLOATING CHAT / SUCCESS DIALOG -->
+    <div
+      id="toast"
+      class="fixed bottom-6 left-6 z-50 glass-panel border border-brand-blue/30 text-white text-xs font-semibold px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none"
+    >
+      <span class="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></span>
+      <span id="toast-text">Action effectuée</span>
+    </div>
+
+    <!-- UTILITY DRAWER: DEV TOOLBOX (A magnificent, student-focused tool) -->
+    <div
+      id="dev-toolbox-btn"
+      class="fixed bottom-6 right-6 z-40 bg-slate-900 hover:bg-slate-800 border border-white/[0.06] hover:border-brand-blue/30 text-white p-3 rounded-xl shadow-2xl cursor-pointer hover:scale-105 transition-all text-xs font-mono font-bold flex items-center space-x-2"
+    >
+      <span class="w-2.5 h-2.5 rounded-full bg-brand-blue animate-pulse"></span>
+      <span>🎓 Boîte à Outils Code</span>
+    </div>
+
+    <!-- Dev Toolbox Drawer Modal -->
+    <div
+      id="dev-toolbox-drawer"
+      class="fixed inset-0 z-50 overflow-y-auto hidden flex items-end justify-center p-4 bg-brand-dark/80 backdrop-blur-sm"
+    >
+      <div
+        class="relative w-full max-w-4xl rounded-t-2xl border border-white/[0.08] bg-slate-900 shadow-2xl p-6 max-h-[85vh] flex flex-col justify-between overflow-hidden"
+      >
+        <!-- Header -->
+        <div
+          class="flex items-center justify-between pb-4 border-b border-white/[0.05]"
+        >
+          <div class="flex items-center space-x-2">
+            <div class="w-2 h-2 rounded-full bg-brand-blue"></div>
+            <h3 class="font-display font-extrabold text-white text-base">
+              Espace Académique &amp; Exporte-Moi
+            </h3>
+          </div>
+          <button
+            id="close-drawer-btn"
+            class="text-slate-400 hover:text-white font-mono text-xs cursor-pointer"
+          >
+            Fermer [ESC]
+          </button>
+        </div>
+
+        <!-- Content -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-6 py-6 overflow-y-auto flex-1 min-h-[300px]"
+        >
+          <!-- Diagnostics & Mentoring -->
+          <div class="md:col-span-4 space-y-4 text-left">
+            <div
+              class="p-4 rounded-xl bg-white/[0.01] border border-white/[0.03] space-y-2"
+            >
+              <span
+                class="block text-[10px] font-mono text-[#60a5fa] font-bold uppercase tracking-wide"
+                >PÉDAGOGIE UX/UI</span
+              >
+              <h4 class="text-xs font-bold text-white">
+                Pourquoi cette structure ?
+              </h4>
+              <p class="text-[11px] text-slate-400 leading-relaxed">
+                Plutôt que des barres de progression clichés de 95% sans valeur,
+                nous listons les technologies avec des compétences
+                contextualisées (ex. <em>PHP: MVC Maison</em>) pour renforcer la
+                crédibilité d'un élève en L2.
+              </p>
+              <p class="text-[11px] text-slate-400 leading-relaxed">
+                Les expériences de direction événementielle d'église et de vente
+                de vêtements sont re-catégorisées en gestion de coûts et
+                leadership d'équipes pour accroître ton profil de stagiaire
+                autonome.
+              </p>
+            </div>
+
+            <div
+              class="p-4 rounded-xl bg-white/[0.01] border border-white/[0.03] space-y-2"
+            >
+              <span
+                class="block text-[10px] font-mono text-teal-400 font-bold uppercase tracking-wide font-semibold"
+                >TUTO DE DEPLOIEMENT</span
+              >
+              <h4 class="text-xs font-bold text-white">Où l'héberger seul ?</h4>
+              <p class="text-[11px] text-slate-400">
+                1. Navigue vers l'onglet <strong>Code Standalone</strong>.<br />
+                2. Copie l'intégralité du code d'un simple clic.<br />
+                3. Colle-le dans un fichier nommé <code>index.html</code>.<br />
+                4. Glisse-le sur
+                <a
+                  href="https://app.netlify.com/"
+                  target="_blank"
+                  class="text-teal-400 underline"
+                  >Netlify Drop</a
+                >
+                ou
+                <a
+                  href="https://pages.github.com/"
+                  target="_blank"
+                  class="text-teal-400 underline"
+                  >GitHub Pages</a
+                >
+                pour l'avoir en ligne gratuitement à vie!
+              </p>
+            </div>
+          </div>
+
+          <!-- Toolbox Tabbed Code block Exporter -->
+          <div
+            class="md:col-span-8 flex flex-col justify-between rounded-xl bg-slate-950 border border-white/[0.05] p-4 relative min-h-[250px] overflow-hidden"
+          >
+            <div
+              class="flex items-center justify-between pb-3 border-b border-white/[0.03] text-xs font-mono"
+            >
+              <span class="text-slate-400">standalone_portfolio.html</span>
+              <button
+                id="copy-standalone-btn"
+                class="px-3 py-1 rounded bg-brand-blue hover:bg-blue-600 text-white text-[11px] font-bold cursor-pointer transition-all"
+              >
+                Copier ce Code
+              </button>
+            </div>
+
+            <!-- Code viewer with actual zero-dependency code of this page -->
+            <pre
+              class="text-left font-mono text-[10px] text-slate-400 overflow-auto p-3 bg-slate-900 rounded-lg max-h-[300px] select-all mt-3"
+            >
+&lt;!-- Code autonome généré spécialement pour Agbanan Elise --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;AGBANAN ELISE | Développeur&lt;/title&gt;
+    &lt;!-- Tailwind Play CDN --&gt;
+    &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"&gt;
+    &lt;style&gt;
+        body { font-family: 'Inter', sans-serif; background-color: #070a13; color: #f1f5f9; }
+        .font-display { font-family: 'Space Grotesk', sans-serif; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;!-- Reste du code complet auto-généré disponible d'un simple clic --&gt;
+            </pre>
+
+            <span
+              class="block text-slate-500 font-mono text-[9px] pt-2 text-right"
+              >Zéro dépendances NPM nécessaires pour ce fichier final</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="border-t border-white/[0.05] pt-4 text-xs font-mono text-slate-500 flex justify-between"
+        >
+          <span>STATUT DU CODE : STABLE CLOUD</span>
+          <span>MODULAIRE ET PORTABLE</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer
+      class="border-t border-white/[0.04] py-8 text-center text-slate-500 text-xs font-mono"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4"
+      >
+        <span>&copy; 2026 AGBANAN AMENUVEVE ELISE. Tous droits réservés.</span>
+        <div class="flex space-x-4">
+          <a
+            href="https://github.com/aelise-lia27"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-white transition-colors"
+            >GitHub</a
+          >
+          <a
+            href="mailto:liagbanan@gmail.com"
+            class="hover:text-white transition-colors"
+            >Email</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrapping Vite script entry -->
+  </body>
+</html>
