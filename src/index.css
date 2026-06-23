@@ -88,3 +88,9 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* Profile photo styling */
+.profile-photo {
+  border: 4px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.15);
+}
+

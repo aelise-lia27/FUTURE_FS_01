@@ -168,14 +168,39 @@ const PROJECTS_DATABASE: Record<number, Project> = {
         description: "Aperçu de la vue d'administration centralisant le catalogue d'annonces et l'état des validations foncières."
       },
       {
-        url: "https://picsum.photos/seed/buildingsubmit/800/500",
-        title: "Création d'Annonces & Upload",
-        description: "Espace utilisateur interactif permettant de publier de nouveaux équipements avec une galerie d'images glisser-déposer."
+        url: "/src/images/building/about_hero.PNG",
+        title: "Fiches de Matériels de Chantier",
+        description: "Aperçu de la vue d'administration centralisant le catalogue d'annonces et l'état des validations foncières."
       },
       {
-        url: "https://picsum.photos/seed/buildingfilter/800/500",
-        title: "Recherche filtrée asynchrone",
-        description: "Filtrage multicritères asynchrone soutenu par JavaScript AJAX et des jointures PHP SQL croisées."
+        url: "/src/images/building/avis_form.PNG",
+        title: "Fiches de Matériels de Chantier",
+        description: "Aperçu de la vue d'administration centralisant le catalogue d'annonces et l'état des validations foncières."
+      },
+      {
+        url: "/src/images/building/avis.PNG",
+        title: "Fiches de Matériels de Chantier",
+        description: "Aperçu de la vue d'administration centralisant le catalogue d'annonces et l'état des validations foncières."
+      },
+      {
+        url: "/src/images/building/admin_1.PNG",
+        title: "Fiches de Matériels de Chantier",
+        description: "Aperçu de la vue d'administration centralisant le catalogue d'annonces et l'état des validations foncières."
+      },
+      {
+        url: "/src/images/building/login_form.PNG",
+        title: "Fiches de Matériels de Chantier",
+        description: "Aperçu de la vue d'administration centralisant le catalogue d'annonces et l'état des validations foncières."
+      },
+      {
+        url: "/src/images/building/register_form.PNG",
+        title: "",
+        description: ""
+      },
+      {
+        url: "/src/images/building/contact_form.PNG",
+        title: "",
+        description: ""
       }
     ]
   },
@@ -328,7 +353,7 @@ function initMobileMenu(): void {
   };
 
   btn.addEventListener("click", toggle);
-  
+
   links.forEach(link => {
     link.addEventListener("click", () => {
       drawer.classList.add("hidden");
@@ -441,13 +466,13 @@ function initProjectModals(): void {
     // Render premium immersive dual-column product-styled layout
     modalContentContainer.innerHTML = `
       <div class="space-y-8 select-none">
-        
+
         <!-- I. OVERSIZED PRODUCT PAGE TITLE & HEADER BANNER -->
         <div class="relative w-full h-48 sm:h-64 rounded-2xl md:rounded-3xl overflow-hidden border border-white/[0.08] shadow-2xl">
           <div class="absolute inset-0 bg-cover bg-center filter blur-md opacity-25 scale-105" style="background-image: url('${data.mainImage}');"></div>
           <img src="${data.mainImage}" alt="${data.title}" class="absolute inset-0 w-full h-full object-cover object-top opacity-90 mix-blend-screen" referrerPolicy="no-referrer" />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950/20"></div>
-          
+
           <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 text-left space-y-2">
             <span class="text-[9px] font-mono tracking-widest ${accentClass} bg-white/[0.02] border ${borderAccentClass} px-2.5 py-1 rounded-full uppercase">
               🚀 Case Study #${data.id}
@@ -485,10 +510,10 @@ function initProjectModals(): void {
 
         <!-- III. RESPONSIVE DUAL-COLUMN LAYOUT -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          
+
           <!-- LEFT COLUMN (STORYTELLING ARCHITECTURE) -->
           <div class="lg:col-span-7 space-y-6 text-left">
-            
+
             <!-- Context card -->
             <div class="bg-white/[0.01] border border-white/[0.03] rounded-2xl p-5 space-y-3">
               <h3 class="text-sm font-bold text-white uppercase tracking-wider font-mono flex items-center gap-2">
@@ -496,7 +521,7 @@ function initProjectModals(): void {
                 I. Contexte général &amp; Motivation
               </h3>
               <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">${data.context}</p>
-              
+
               <div class="pt-3 border-t border-white/[0.04]">
                 <span class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">🎯 Objectifs stratégiques fixés :</span>
                 <ul class="space-y-2">
@@ -558,14 +583,14 @@ function initProjectModals(): void {
 
           <!-- RIGHT COLUMN (MEDIA ASSETS & TECH SPECS SIDEBAR) -->
           <div class="lg:col-span-5 space-y-6 text-left border-t lg:border-t-0 border-white/[0.05] pt-6 lg:pt-0 lg:pl-6 lg:border-l">
-            
+
             <!-- Interactive Image Gallery Viewer Widget -->
             <div class="space-y-3">
               <h3 class="text-sm font-bold text-white uppercase tracking-wider font-mono flex items-center gap-2">
                 <svg class="w-4 h-4 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                 III. Capture d'écran interactive
               </h3>
-              
+
               <!-- Selected main viewport view -->
               <div class="relative w-full aspect-video rounded-xl sm:rounded-2xl overflow-hidden border border-white/[0.06] bg-slate-950 shadow-xl group cursor-zoom-in">
                 <img id="modal-gallery-main" src="${data.gallery[0] ? data.gallery[0].url : data.mainImage}" alt="${data.title}" class="w-full h-full object-cover transition-all duration-300 group-hover:scale-[1.02]" referrerPolicy="no-referrer" />
@@ -679,7 +704,7 @@ function initProjectModals(): void {
   });
 
   closeModalBtn.addEventListener("click", closeModal);
-  
+
   // Close on outer click
   modal.addEventListener("click", (e) => {
     if (e.target === modal) {
@@ -817,7 +842,7 @@ function initEmailCopy(): void {
     navigator.clipboard.writeText(emailText).then(() => {
       btn.textContent = "Copié ✓";
       btn.classList.add("bg-teal-500/10", "border-teal-500/20", "text-teal-400");
-      
+
       showToast("Email professionnel copié !");
 
       setTimeout(() => {
@@ -834,7 +859,7 @@ function initEmailCopy(): void {
 function showToast(message: string): void {
   const toast = document.getElementById("toast");
   const toastTxt = document.getElementById("toast-text");
-  
+
   if (!toast || !toastTxt) return;
 
   toastTxt.textContent = message;
@@ -869,7 +894,7 @@ function initDevToolbox(): void {
 
   openBtn.addEventListener("click", openDrawer);
   closeBtn.addEventListener("click", closeDrawer);
-  
+
   drawer.addEventListener("click", (e) => {
     if (e.target === drawer) {
       closeDrawer();
@@ -888,7 +913,7 @@ function initDevToolbox(): void {
     cvBtn.addEventListener("click", (e) => {
       e.preventDefault(); // Control behavior programmatically to ensure instant auto-download
       showToast("Téléchargement du CV d'Agbanan Elise lancé !");
-      
+
       fetch("/cv.pdf")
         .then(response => {
           if (!response.ok) {
@@ -925,7 +950,7 @@ function initDevToolbox(): void {
       copyCodeBtn.textContent = "Code Source Copié ✓";
       copyCodeBtn.classList.remove("bg-brand-blue");
       copyCodeBtn.classList.add("bg-teal-600");
-      
+
       showToast("Fichier HTML autonome copié dans le presse-papiers!");
 
       setTimeout(() => {
