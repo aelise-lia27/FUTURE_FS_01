@@ -271,7 +271,7 @@ const PROJECTS_DATABASE: Record<number, Project> = {
     skillsGained: ["Modélisation et conception de base de données relationnelle (MCD/MLD Merise)", "Maîtrise des jointures SQL complexes", "Prise en main des enjeux d'ergonomie terrain"],
     year: "2024",
     status: "Terminé et validé academiquement",
-    mainImage: "/src/lavageAutoPro.PNG",
+    mainImage: "/src/images/lavageautopro/home.PNG",
     objectives: [
       "Digitaliser le parcours de lavage en temps réel, de la création de la plaque d'immatriculation à la comptabilité variable.",
       "Garantir une traçabilité financière totale pour éliminer les vols de caisses répétés.",
@@ -284,19 +284,19 @@ const PROJECTS_DATABASE: Record<number, Project> = {
     ],
     gallery: [
       {
-        url: "/src/lavageAutoPro.PNG",
-        title: "Contrôle d'Encaissement & Équipe",
-        description: "Dashboard présentant la file de nettoyage en temps réel et l'état d'affectation de chaque laveur aux véhicules."
+        url: "/src/images/lavageautopro/login.PNG",
+        title: "",
+        description: ""
       },
       {
-        url: "https://picsum.photos/seed/lavageticket/800/500",
+        url: "/src/images/lavageautopro/admin_service.PNG",
         title: "Générateur de ticket de lavage",
         description: "Formulaire d'ouverture de dossier simplifié pour les superviseurs terrain à l'accueil."
       },
       {
-        url: "https://picsum.photos/seed/lavagecomm/800/500",
-        title: "Calculateur de Commission",
-        description: "Système analytique de consolidation des ventes versant mensuellement les primes automatisées calculées sous SQL."
+        url: "/src/images/lavageautopro/admin_dash.PNG",
+        title: "",
+        description: ""
       }
     ]
   }
