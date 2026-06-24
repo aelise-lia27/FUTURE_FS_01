@@ -302,6 +302,80 @@ const PROJECTS_DATABASE: Record<number, Project> = {
   }
 };
 
+// --- MODULE DES EXPÉRIENCES PROFESSIONNELLES (AJOUT) ---
+interface Experience {
+  id: number;
+  poste: string;
+  organisation: string;
+  typeContrat: string;
+  dateDebut: string;
+  dateFin: string;
+  localisation: string;
+  description: string;
+  missions: { title: string; tasks: string[] }[];
+  competences: string[];
+  technologies: string[];
+  realisations: string[];
+  cin?: string;
+  logoText: string;
+  logoBg: string;
+}
+
+const EXPERIENCES_DATABASE: Experience[] = [
+  {
+    id: 1,
+    poste: "Full Stack Web Development Intern",
+    organisation: "Future Interns",
+    typeContrat: "Stage à distance (Remote Internship)",
+    dateDebut: "11 Juin 2026",
+    dateFin: "11 Juillet 2026",
+    localisation: "À distance",
+    cin: "FIT/JUN26/FS18610",
+    logoText: "FI",
+    logoBg: "from-blue-600 to-indigo-600",
+    description: "Participation au programme international de stage de Future Interns en tant que stagiaire Full Stack Web Development. Réalisation de projets pratiques denses couvrant le développement de produits web modernes (conception d'interfaces utilisateurs animées, bases de données relationnelles, formulaires asynchrones et méthodologies de gestion de projets techniques).",
+    missions: [
+      {
+        title: "Task 1 — Personal Professional Portfolio Website",
+        tasks: [
+          "Conception et modélisation d'une interface web moderne, optimisée pour mobile, tablette et desktop.",
+          "Présentation structurée et interactive des compétences clés, des projets terminés et du parcours académique.",
+          "Création d'un formulaire de contact asynchrone sécurisé avec validation instantanée côté client.",
+          "Optimisation fine du référencement naturel (SEO) et de la performance globale de chargement.",
+          "Amélioration de l'ergonomie utilisateur globale grâce à l'intégration de micro-animations fluides."
+        ]
+      },
+      {
+        title: "Task 2 — Client Lead Management System (Mini CRM)",
+        tasks: [
+          "Développement complet d'une application de gestion de prospects (Mini CRM) responsive.",
+          "Implémentation intégrale des opérations d'écriture et de lecture dans la base de données (CRUD complet).",
+          "Mise en place d'un tableau d'état dynamique pour suivre les opportunités commerciales selon leur statut.",
+          "Connexion asynchrone sécurisée avec le backend pour synchroniser l'affichage en temps réel.",
+          "Sécurisation des saisies et contrôle sémantique strict des formulaires pour éliminer les injections de données."
+        ]
+      },
+      {
+        title: "Task 3 — Local Business Website Project",
+        tasks: [
+          "Création sur-mesure d'un site vitrine haut de gamme et responsive pour le compte d'une entreprise locale.",
+          "Modélisation UX/UI moderne mettant en avant l'identité sémantique et les forces commerciales du client.",
+          "Présentation physique et démonstration directe de la solution technique au propriétaire de l'établissement.",
+          "Mise en avant stratégique de la valeur commerciale ajoutée par la transformation digitale du commerce."
+        ]
+      }
+    ],
+    technologies: ["HTML5", "CSS3", "JavaScript (ES6)", "Responsive Design", "UI/UX Design"],
+    competences: ["Git", "GitHub", "VS Code Workflow", "Gestion de projet technique", "Qualité & SEO"],
+    realisations: [
+      "Conception et déploiement mondial d'un portfolio hautement interactif et performant accessible en ligne.",
+      "Mise en place d'une architecture de dépôts GitHub propre et documentée pour assurer le suivi d'équipe des projets.",
+      "Réalisation de projets informatiques complets de bout en bout répondant directement à des besoins réels du marché.",
+      "Adoption stricte des bonnes pratiques d'ingénierie logicielle (contrôle de version, documentation technique sémantique et clean code)."
+    ]
+  }
+];
+
 // 2. LAUNCH CONTROLLER ON COMPLETE DOM LOAD
 document.addEventListener("DOMContentLoaded", () => {
   initNavbarScroll();
@@ -309,6 +383,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSkillsFilter();
   initProjectsFilter();
   initProjectModals();
+  initExperiences();
   initContactForm();
   initEmailCopy();
   initDevToolbox();
@@ -718,6 +793,145 @@ function initProjectModals(): void {
       closeModal();
     }
   });
+}
+
+
+// GÉNÉRATION DYNAMIQUE DES EXPÉRIENCES DANS LA FRISE CHRONOLOGIQUE
+function initExperiences(): void {
+  const container = document.getElementById("experiences-list-container");
+  if (!container) return;
+
+  container.innerHTML = EXPERIENCES_DATABASE.map(exp => {
+    const missionsHTML = exp.missions.map(mission => `
+      <div class="p-4 rounded-xl border border-white/[0.04] bg-slate-900/20 hover:border-brand-blue/20 hover:bg-slate-900/40 transition-all duration-300 space-y-3 flex flex-col justify-between">
+        <div>
+          <h5 class="text-xs font-bold font-display text-white flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-blue shadow-[0_0_8px_rgba(59,130,246,0.6)]"></span>
+            ${mission.title}
+          </h5>
+          <ul class="space-y-1.5 mt-2.5">
+            ${mission.tasks.map(task => `
+              <li class="text-[11px] text-slate-400 leading-relaxed font-sans flex items-start gap-1.5">
+                <svg class="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>${task}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+      </div>
+    `).join('');
+
+    const realisationsHTML = exp.realisations.map(realisation => `
+      <div class="flex items-start gap-2 text-xs text-slate-300 font-sans leading-relaxed">
+        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500/15 text-emerald-400 shrink-0 mt-0.5">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+          </svg>
+        </span>
+        <span>${realisation}</span>
+      </div>
+    `).join('');
+
+    const technologiesHTML = exp.technologies.map(tech => `
+      <span class="text-[9px] font-mono bg-white/[0.03] hover:bg-brand-blue/10 hover:text-brand-blue border border-white/[0.05] hover:border-brand-blue/25 text-slate-300 px-2 py-0.5 rounded-md transition-colors duration-200 cursor-default">${tech}</span>
+    `).join('');
+
+    const competencesHTML = exp.competences.map(comp => `
+      <span class="text-[9px] font-mono bg-white/[0.03] hover:bg-brand-teal/10 hover:text-brand-teal border border-white/[0.05] hover:border-brand-teal/25 text-slate-400 px-2 py-0.5 rounded-md transition-colors duration-200 cursor-default">${comp}</span>
+    `).join('');
+
+    const cinBadge = exp.cin ? `
+      <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-mono text-emerald-400 font-semibold shadow-inner animate-pulse">
+        <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+        </svg>
+        ID Certificat (CIN) : ${exp.cin}
+      </div>
+    ` : '';
+
+    return `
+      <!-- Événement de Frise Chronologique ${exp.id} -->
+      <div class="relative group" id="exp-item-${exp.id}">
+        <!-- Point d'ancrage lumineux sur la frise -->
+        <div class="absolute left-4 sm:left-6 -translate-x-1.5 w-3.5 h-3.5 rounded-full bg-brand-blue border-4 border-brand-dark z-10 group-hover:scale-125 transition-transform duration-300 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+
+        <!-- Corps de la carte de l'expérience -->
+        <div class="pl-10 sm:pl-16 space-y-4">
+          <div class="p-6 rounded-2xl border border-white/[0.05] bg-slate-900/10 hover:bg-slate-900/20 hover:border-brand-blue/20 transition-all duration-300">
+
+            <!-- En-tête de la carte -->
+            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 pb-4 border-b border-white/[0.03]">
+
+              <!-- Informations principales à gauche -->
+              <div class="flex items-start gap-4">
+                <!-- Logo stylisé avec dégradé -->
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br ${exp.logoBg} flex items-center justify-center font-display font-black text-white text-lg tracking-tight shrink-0 shadow-lg shadow-blue-500/10 group-hover:scale-105 transition-transform duration-300">
+                  ${exp.logoText}
+                </div>
+                <div>
+                  <h3 class="text-base sm:text-lg font-extrabold font-display text-white group-hover:text-brand-blue transition-colors duration-300">${exp.poste}</h3>
+                  <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 mt-1 text-xs">
+                    <span class="text-brand-blue font-semibold">${exp.organisation}</span>
+                    <span class="text-slate-500 font-mono">•</span>
+                    <span class="text-slate-400">${exp.localisation}</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Badges temporels et contractuels à droite -->
+              <div class="flex flex-wrap items-center gap-2 md:text-right">
+                <span class="px-2.5 py-0.5 rounded-lg text-[10px] font-mono font-bold bg-brand-blue/10 border border-brand-blue/20 text-blue-400 uppercase tracking-wide">
+                  ${exp.typeContrat}
+                </span>
+                <span class="px-2.5 py-0.5 rounded-lg text-[10px] font-mono font-bold bg-white/[0.03] border border-white/[0.08] text-slate-300">
+                  ${exp.dateDebut} – ${exp.dateFin}
+                </span>
+              </div>
+
+            </div>
+
+            <!-- Badge de Certification (CIN) -->
+            ${cinBadge ? `<div class="mt-3.5">${cinBadge}</div>` : ''}
+
+            <!-- Description générale -->
+            <div class="mt-4">
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans max-w-4xl">
+                ${exp.description}
+              </p>
+            </div>
+
+            <!-- Bloc Missions & Tâches -->
+            <div class="mt-6 space-y-3">
+              <h4 class="text-[10px] uppercase font-bold tracking-widest font-mono text-slate-500">Missions principales &amp; Projets</h4>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                ${missionsHTML}
+              </div>
+            </div>
+
+            <!-- Bloc Réalisations Clés -->
+            <div class="mt-6 space-y-3">
+              <h4 class="text-[10px] uppercase font-bold tracking-widest font-mono text-slate-500">Réalisations Clés</h4>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 bg-white/[0.01] border border-white/[0.03] p-4 rounded-xl">
+                ${realisationsHTML}
+              </div>
+            </div>
+
+            <!-- Mots-clés des compétences & technologies -->
+            <div class="mt-6 pt-4 border-t border-white/[0.03] flex flex-wrap items-center gap-2">
+              <span class="text-[10px] font-semibold text-slate-400 font-mono uppercase tracking-wider mr-1">Techs &amp; compétences :</span>
+              <div class="flex flex-wrap gap-1.5">
+                ${technologiesHTML}
+                ${competencesHTML}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
 }
 
 // INTERACTIVE VERIFICATION AND ALERT POPUPS FOR CONTACT MESSAGE
