@@ -2384,154 +2384,15 @@
     </div>
 
     <!-- UTILITY DRAWER: DEV TOOLBOX (A magnificent, student-focused tool) -->
-    <div
+    <!-- <div
       id="dev-toolbox-btn"
       class="fixed bottom-6 right-6 z-40 bg-slate-900 hover:bg-slate-800 border border-white/[0.06] hover:border-brand-blue/30 text-white p-3 rounded-xl shadow-2xl cursor-pointer hover:scale-105 transition-all text-xs font-mono font-bold flex items-center space-x-2"
     >
       <span class="w-2.5 h-2.5 rounded-full bg-brand-blue animate-pulse"></span>
       <span>🎓 Boîte à Outils Code</span>
-    </div>
+    </div> -->
 
     <!-- Dev Toolbox Drawer Modal -->
-    <div
-      id="dev-toolbox-drawer"
-      class="fixed inset-0 z-50 overflow-y-auto hidden flex items-end justify-center p-4 bg-brand-dark/80 backdrop-blur-sm"
-    >
-      <div
-        class="relative w-full max-w-4xl rounded-t-2xl border border-white/[0.08] bg-slate-900 shadow-2xl p-6 max-h-[85vh] flex flex-col justify-between overflow-hidden"
-      >
-        <!-- Header -->
-        <div
-          class="flex items-center justify-between pb-4 border-b border-white/[0.05]"
-        >
-          <div class="flex items-center space-x-2">
-            <div class="w-2 h-2 rounded-full bg-brand-blue"></div>
-            <h3 class="font-display font-extrabold text-white text-base">
-              Espace Académique &amp; Exporte-Moi
-            </h3>
-          </div>
-          <button
-            id="close-drawer-btn"
-            class="text-slate-400 hover:text-white font-mono text-xs cursor-pointer"
-          >
-            Fermer [ESC]
-          </button>
-        </div>
-
-        <!-- Content -->
-        <div
-          class="grid grid-cols-1 md:grid-cols-12 gap-6 py-6 overflow-y-auto flex-1 min-h-[300px]"
-        >
-          <!-- Diagnostics & Mentoring -->
-          <div class="md:col-span-4 space-y-4 text-left">
-            <div
-              class="p-4 rounded-xl bg-white/[0.01] border border-white/[0.03] space-y-2"
-            >
-              <span
-                class="block text-[10px] font-mono text-[#60a5fa] font-bold uppercase tracking-wide"
-                >PÉDAGOGIE UX/UI</span
-              >
-              <h4 class="text-xs font-bold text-white">
-                Pourquoi cette structure ?
-              </h4>
-              <p class="text-[11px] text-slate-400 leading-relaxed">
-                Plutôt que des barres de progression clichés de 95% sans valeur,
-                nous listons les technologies avec des compétences
-                contextualisées (ex. <em>PHP: MVC Maison</em>) pour renforcer la
-                crédibilité d'un élève en L2.
-              </p>
-              <p class="text-[11px] text-slate-400 leading-relaxed">
-                Les expériences de direction événementielle d'église et de vente
-                de vêtements sont re-catégorisées en gestion de coûts et
-                leadership d'équipes pour accroître ton profil de stagiaire
-                autonome.
-              </p>
-            </div>
-
-            <div
-              class="p-4 rounded-xl bg-white/[0.01] border border-white/[0.03] space-y-2"
-            >
-              <span
-                class="block text-[10px] font-mono text-teal-400 font-bold uppercase tracking-wide font-semibold"
-                >TUTO DE DEPLOIEMENT</span
-              >
-              <h4 class="text-xs font-bold text-white">Où l'héberger seul ?</h4>
-              <p class="text-[11px] text-slate-400">
-                1. Navigue vers l'onglet <strong>Code Standalone</strong>.<br />
-                2. Copie l'intégralité du code d'un simple clic.<br />
-                3. Colle-le dans un fichier nommé <code>index.html</code>.<br />
-                4. Glisse-le sur
-                <a
-                  href="https://app.netlify.com/"
-                  target="_blank"
-                  class="text-teal-400 underline"
-                  >Netlify Drop</a
-                >
-                ou
-                <a
-                  href="https://pages.github.com/"
-                  target="_blank"
-                  class="text-teal-400 underline"
-                  >GitHub Pages</a
-                >
-                pour l'avoir en ligne gratuitement à vie!
-              </p>
-            </div>
-          </div>
-
-          <!-- Toolbox Tabbed Code block Exporter -->
-          <div
-            class="md:col-span-8 flex flex-col justify-between rounded-xl bg-slate-950 border border-white/[0.05] p-4 relative min-h-[250px] overflow-hidden"
-          >
-            <div
-              class="flex items-center justify-between pb-3 border-b border-white/[0.03] text-xs font-mono"
-            >
-              <span class="text-slate-400">standalone_portfolio.html</span>
-              <button
-                id="copy-standalone-btn"
-                class="px-3 py-1 rounded bg-brand-blue hover:bg-blue-600 text-white text-[11px] font-bold cursor-pointer transition-all"
-              >
-                Copier ce Code
-              </button>
-            </div>
-
-            <!-- Code viewer with actual zero-dependency code of this page -->
-            <pre
-              class="text-left font-mono text-[10px] text-slate-400 overflow-auto p-3 bg-slate-900 rounded-lg max-h-[300px] select-all mt-3"
-            >
-&lt;!-- Code autonome généré spécialement pour Agbanan Elise --&gt;
-&lt;!DOCTYPE html&gt;
-&lt;html lang="fr"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;AGBANAN ELISE | Développeur&lt;/title&gt;
-    &lt;!-- Tailwind Play CDN --&gt;
-    &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
-    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"&gt;
-    &lt;style&gt;
-        body { font-family: 'Inter', sans-serif; background-color: #070a13; color: #f1f5f9; }
-        .font-display { font-family: 'Space Grotesk', sans-serif; }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;!-- Reste du code complet auto-généré disponible d'un simple clic --&gt;
-            </pre>
-
-            <span
-              class="block text-slate-500 font-mono text-[9px] pt-2 text-right"
-              >Zéro dépendances NPM nécessaires pour ce fichier final</span
-            >
-          </div>
-        </div>
-
-        <div
-          class="border-t border-white/[0.05] pt-4 text-xs font-mono text-slate-500 flex justify-between"
-        >
-          <span>STATUT DU CODE : STABLE CLOUD</span>
-          <span>MODULAIRE ET PORTABLE</span>
-        </div>
-      </div>
-    </div>
 
     <!-- FOOTER -->
     <footer
