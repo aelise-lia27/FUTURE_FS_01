@@ -6,131 +6,96 @@
     <title>
       AGBANAN AMENUVEVE ELISE | Développeur d'Applications Web & Mobile
     </title>
-    <!-- Gogle Fonts included dynamically -->
-    <link rel="icon" type="image/png" href="/src/profile/profile.png" />
-    <script type="module" crossorigin src="/FUTURE_FS_01/assets/index-C-jJwi69.js"></script>
-    <link rel="stylesheet" crossorigin href="/FUTURE_FS_01/assets/index-DbDaQDGA.css">
+    <!-- Tailwind Play CDN for easy zero-dependency preview/hosting -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-blue": "#3b82f6",
+              "brand-teal": "#14b8a6",
+              "brand-dark": "#070a13",
+              "brand-card": "#0f172a",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Space Grotesk", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Glowing animations and glassmorphism styling embedded directly */
+      @keyframes pulseGlow {
+        0%,
+        100% {
+          opacity: 0.15;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.25;
+          transform: scale(1.05);
+        }
+      }
+      .tech-glow {
+        position: relative;
+      }
+      .tech-glow::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+          circle at 50% 50%,
+          rgba(59, 130, 246, 0.15),
+          transparent 70%
+        );
+        z-index: -1;
+        pointer-events: none;
+        animation: pulseGlow 8s infinite ease-in-out;
+      }
+      .glass-panel {
+        background: rgba(15, 23, 42, 0.45);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .text-gradient-accent {
+        background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      /* Custom Webkit scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #070a13;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3b82f6;
+      }
+    </style>
   </head>
   <body
-    class="bg-brand-dark text-slate-100 font-sans antialiased min-h-screen selection:bg-brand-blue selection:text-white tech-glow overflow-x-hidden"
+    class="bg-[#070a13] text-slate-100 font-sans antialiased min-h-screen selection:bg-blue-500 selection:text-white tech-glow overflow-x-hidden"
   >
-    <!-- PRELOADER -->
-    <div
-      id="page-preloader"
-      class="fixed inset-0 bg-[#070a13] z-[9999] flex flex-col items-center justify-center transition-all duration-700 ease-in-out"
-    >
-      <div
-        class="flex flex-col items-center max-w-xs px-6 text-center space-y-6"
-      >
-        <!-- Logo Icon with Spinning Outer Aura -->
-        <div class="relative w-24 h-24 flex items-center justify-center">
-          <!-- Outer Spinning Ring -->
-          <div
-            class="absolute inset-0 rounded-2xl border-2 border-brand-blue/10 border-t-brand-blue animate-spin [animation-duration:1000ms]"
-          ></div>
-          <!-- Secondary reverse spinning ring for complexity -->
-          <div
-            class="absolute inset-2 rounded-xl border border-brand-teal/5 border-b-brand-teal/40 animate-spin [animation-duration:1500ms] [animation-direction:reverse]"
-          ></div>
-          <!-- Center Text -->
-          <div
-            class="font-display font-black text-white text-2xl tracking-tighter"
-          >
-            AE
-          </div>
-        </div>
+    <!-- Le corps HTML de index.html est embarqué ici pour d'un clic pouvoir lancer le portfolio dans n'importe quel hébergeur libre de ton choix ! -->
 
-        <!-- Text Indicator with typing/pulse vibe -->
-        <div class="space-y-3">
-          <div
-            id="preloader-text"
-            class="font-mono text-[10px] uppercase tracking-[0.2em] text-[#60a5fa] font-semibold"
-          >
-            Initialisation...
-          </div>
-          <!-- Progress bar track -->
-          <div
-            class="w-40 h-[2px] bg-white/[0.04] rounded-full overflow-hidden relative mx-auto"
-          >
-            <div
-              id="preloader-bar"
-              class="absolute top-0 left-0 h-full w-[0%] bg-gradient-to-r from-brand-blue to-brand-teal rounded-full transition-all duration-300 ease-out"
-            ></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      (function () {
-        // Prevent body scrolling while loading
-        document.body.classList.add("overflow-y-hidden");
-
-        const bar = document.getElementById("preloader-bar");
-        const text = document.getElementById("preloader-text");
-        const phrases = [
-          "Chargement de l'interface...",
-          "Connexion aux modules...",
-          "Optimisation du responsive...",
-          "Prêt !",
-        ];
-
-        let progress = 0;
-        let phraseIdx = 0;
-
-        function updateProgress(target, speed, next) {
-          const interval = setInterval(function () {
-            if (progress < target) {
-              progress += Math.floor(Math.random() * 4) + 1;
-              if (progress > target) progress = target;
-              if (bar) bar.style.width = progress + "%";
-
-              // Change phrase dynamically based on milestones
-              if (progress > 30 && phraseIdx === 0) {
-                phraseIdx = 1;
-                if (text) text.innerText = phrases[phraseIdx];
-              } else if (progress > 65 && phraseIdx === 1) {
-                phraseIdx = 2;
-                if (text) text.innerText = phrases[phraseIdx];
-              }
-            } else {
-              clearInterval(interval);
-              if (next) next();
-            }
-          }, speed);
-        }
-
-        // Start loading sequence
-        updateProgress(45, 15, function () {
-          updateProgress(85, 25, null);
-        });
-
-        // Expose function to complete it
-        window.completePreloader = function () {
-          updateProgress(100, 5, function () {
-            if (text) text.innerText = phrases[3];
-            setTimeout(function () {
-              const preloader = document.getElementById("page-preloader");
-              if (preloader) {
-                preloader.classList.add("opacity-0", "pointer-events-none");
-                // Remove scroll lock
-                document.body.classList.remove("overflow-y-hidden");
-                setTimeout(function () {
-                  preloader.remove();
-                }, 700);
-              }
-            }, 300);
-          });
-        };
-
-        // Failsafe of 4.5 seconds to make sure the app is always accessible
-        setTimeout(function () {
-          if (typeof window.completePreloader === "function") {
-            window.completePreloader();
-          }
-        }, 4500);
-      })();
-    </script>
     <!-- NAVIGATION BAR -->
     <header
       id="navbar"
@@ -221,7 +186,7 @@
                   fill-rule="evenodd"
                   d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
                   clip-rule="evenodd"
-                />
+                ></path>
               </svg>
             </a>
             <a
@@ -327,7 +292,7 @@
                   fill-rule="evenodd"
                   d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
                   clip-rule="evenodd"
-                />
+                ></path>
               </svg>
               <span class="text-xs font-mono">GitHub Profile</span>
             </a>
@@ -1340,7 +1305,640 @@
           id="experiences-list-container"
           class="space-y-12 relative before:absolute before:inset-y-1 before:left-4 sm:before:left-6 before:w-[1px] before:bg-white/[0.06]"
         >
-          <!-- Les expériences s'injecteront ici dynamiquement -->
+          <!-- Événement de Frise Chronologique 1 -->
+          <div class="relative group" id="exp-item-1">
+            <!-- Point d'ancrage lumineux sur la frise -->
+            <div
+              class="absolute left-4 sm:left-6 -translate-x-1.5 w-3.5 h-3.5 rounded-full bg-brand-blue border-4 border-brand-dark z-10 group-hover:scale-125 transition-transform duration-300 shadow-[0_0_10px_rgba(59,130,246,0.5)]"
+            ></div>
+
+            <!-- Corps de la carte de l'expérience -->
+            <div class="pl-10 sm:pl-16 space-y-4">
+              <div
+                class="p-6 rounded-2xl border border-white/[0.05] bg-slate-900/10 hover:bg-slate-900/20 hover:border-brand-blue/20 transition-all duration-300"
+              >
+                <!-- En-tête de la carte -->
+                <div
+                  class="flex flex-col md:flex-row md:items-start justify-between gap-4 pb-4 border-b border-white/[0.03]"
+                >
+                  <!-- Informations principales à gauche -->
+                  <div class="flex items-start gap-4">
+                    <!-- Logo stylisé avec dégradé -->
+                    <div
+                      class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center font-display font-black text-white text-lg tracking-tight shrink-0 shadow-lg shadow-blue-500/10 group-hover:scale-105 transition-transform duration-300"
+                    >
+                      FI
+                    </div>
+                    <div>
+                      <h3
+                        class="text-base sm:text-lg font-extrabold font-display text-white group-hover:text-brand-blue transition-colors duration-300"
+                      >
+                        Full Stack Web Development Intern
+                      </h3>
+                      <div
+                        class="flex flex-wrap items-center gap-x-2.5 gap-y-1 mt-1 text-xs"
+                      >
+                        <span class="text-brand-blue font-semibold"
+                          >Future Interns</span
+                        >
+                        <span class="text-slate-500 font-mono">•</span>
+                        <span class="text-slate-400">À distance</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Badges temporels et contractuels à droite -->
+                  <div class="flex flex-wrap items-center gap-2 md:text-right">
+                    <span
+                      class="px-2.5 py-0.5 rounded-lg text-[10px] font-mono font-bold bg-brand-blue/10 border border-brand-blue/20 text-blue-400 uppercase tracking-wide"
+                    >
+                      Stage à distance (Remote Internship)
+                    </span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-lg text-[10px] font-mono font-bold bg-white/[0.03] border border-white/[0.08] text-slate-300"
+                    >
+                      11 Juin 2026 – 11 Juillet 2026
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Badge de Certification (CIN) -->
+
+                <!-- Description générale -->
+                <div class="mt-4">
+                  <p
+                    class="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans max-w-4xl"
+                  >
+                    Participation au programme international de stage de Future
+                    Interns en tant que stagiaire Full Stack Web Development.
+                    Réalisation de projets pratiques denses couvrant le
+                    développement de produits web modernes (conception
+                    d'interfaces utilisateurs animées, bases de données
+                    relationnelles, formulaires asynchrones et méthodologies de
+                    gestion de projets techniques).
+                  </p>
+                </div>
+
+                <!-- Bloc Missions & Tâches -->
+                <div class="mt-6 space-y-3">
+                  <h4
+                    class="text-[10px] uppercase font-bold tracking-widest font-mono text-slate-500"
+                  >
+                    Missions principales &amp; Projets
+                  </h4>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div
+                      class="p-4 rounded-xl border border-white/[0.04] bg-slate-900/20 hover:border-brand-blue/20 hover:bg-slate-900/40 transition-all duration-300 space-y-3 flex flex-col justify-between"
+                    >
+                      <div>
+                        <h5
+                          class="text-xs font-bold font-display text-white flex items-center gap-1.5"
+                        >
+                          <span
+                            class="w-1.5 h-1.5 rounded-full bg-brand-blue shadow-[0_0_8px_rgba(59,130,246,0.6)]"
+                          ></span>
+                          Task 1 — Personal Professional Portfolio Website
+                        </h5>
+                        <ul class="space-y-1.5 mt-2.5">
+                          <li
+                            class="text-[11px] text-slate-400 leading-relaxed font-sans flex items-start gap-1.5"
+                          >
+                            <svg
+                              class="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2.5"
+                                d="M5 13l4 4L19 7"
+                              ></path>
+                            </svg>
+                            <span
+                              >Conception et modélisation d'une interface web
+                              moderne, optimisée pour mobile, tablette et
+                              desktop.</span
+                            >
+                          </li>
+
+                          <li
+                            class="text-[11px] text-slate-400 leading-relaxed font-sans flex items-start gap-1.5"
+                          >
+                            <svg
+                              class="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2.5"
+                                d="M5 13l4 4L19 7"
+                              ></path>
+                            </svg>
+                            <span
+                              >Présentation structurée et interactive des
+                              compétences clés, des projets terminés et du
+                              parcours académique.</span
+                            >
+                          </li>
+
+                          <li
+                            class="text-[11px] text-slate-400 leading-relaxed font-sans flex items-start gap-1.5"
+                          >
+                            <svg
+                              class="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2.5"
+                                d="M5 13l4 4L19 7"
+                              ></path>
+                            </svg>
+                            <span
+                              >Création d'un formulaire de contact asynchrone
+                              sécurisé avec validation instantanée côté
+                              client.</span
+                            >
+                          </li>
+
+                          <li
+                            class="text-[11px] text-slate-400 leading-relaxed font-sans flex items-start gap-1.5"
+                          >
+                            <svg
+                              class="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2.5"
+                                d="M5 13l4 4L19 7"
+                              ></path>
+                            </svg>
+                            <span
+                              >Optimisation fine du référencement naturel (SEO)
+                              et de la performance globale de chargement.</span
+                            >
+                          </li>
+
+                          <li
+                            class="text-[11px] text-slate-400 leading-relaxed font-sans flex items-start gap-1.5"
+                          >
+                            <svg
+                              class="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2.5"
+                                d="M5 13l4 4L19 7"
+                              ></path>
+                            </svg>
+                            <span
+                              >Amélioration de l'ergonomie utilisateur globale
+                              grâce à l'intégration de micro-animations
+                              fluides.</span
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div
+                      class="p-4 rounded-xl border border-white/[0.04] bg-slate-900/20 hover:border-brand-blue/20 hover:bg-slate-900/40 transition-all duration-300 space-y-3 flex flex-col justify-between"
+                    >
+                      <div>
+                        <h5
+                          class="text-xs font-bold font-display text-white flex items-center gap-1.5"
+                        >
+                          <span
+                            class="w-1.5 h-1.5 rounded-full bg-brand-blue shadow-[0_0_8px_rgba(59,130,246,0.6)]"
+                          ></span>
+                          Task 2 — Client Lead Management System (Mini CRM)
+                        </h5>
+                        <ul class="space-y-1.5 mt-2.5">
+                          <li
+                            class="text-[11px] text-slate-400 leading-relaxed font-sans flex items-start gap-1.5"
+                          >
+                            <svg
+                              class="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2.5"
+                                d="M5 13l4 4L19 7"
+                              ></path>
+                            </svg>
+                            <span
+                              >Développement complet d'une application de
+                              gestion de prospects (Mini CRM) responsive.</span
+                            >
+                          </li>
+
+                          <li
+                            class="text-[11px] text-slate-400 leading-relaxed font-sans flex items-start gap-1.5"
+                          >
+                            <svg
+                              class="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2.5"
+                                d="M5 13l4 4L19 7"
+                              ></path>
+                            </svg>
+                            <span
+                              >Implémentation intégrale des opérations
+                              d'écriture et de lecture dans la base de données
+                              (CRUD complet).</span
+                            >
+                          </li>
+
+                          <li
+                            class="text-[11px] text-slate-400 leading-relaxed font-sans flex items-start gap-1.5"
+                          >
+                            <svg
+                              class="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2.5"
+                                d="M5 13l4 4L19 7"
+                              ></path>
+                            </svg>
+                            <span
+                              >Mise en place d'un tableau d'état dynamique pour
+                              suivre les opportunités commerciales selon leur
+                              statut.</span
+                            >
+                          </li>
+
+                          <li
+                            class="text-[11px] text-slate-400 leading-relaxed font-sans flex items-start gap-1.5"
+                          >
+                            <svg
+                              class="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2.5"
+                                d="M5 13l4 4L19 7"
+                              ></path>
+                            </svg>
+                            <span
+                              >Connexion asynchrone sécurisée avec le backend
+                              pour synchroniser l'affichage en temps réel.</span
+                            >
+                          </li>
+
+                          <li
+                            class="text-[11px] text-slate-400 leading-relaxed font-sans flex items-start gap-1.5"
+                          >
+                            <svg
+                              class="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2.5"
+                                d="M5 13l4 4L19 7"
+                              ></path>
+                            </svg>
+                            <span
+                              >Sécurisation des saisies et contrôle sémantique
+                              strict des formulaires pour éliminer les
+                              injections de données.</span
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div
+                      class="p-4 rounded-xl border border-white/[0.04] bg-slate-900/20 hover:border-brand-blue/20 hover:bg-slate-900/40 transition-all duration-300 space-y-3 flex flex-col justify-between"
+                    >
+                      <div>
+                        <h5
+                          class="text-xs font-bold font-display text-white flex items-center gap-1.5"
+                        >
+                          <span
+                            class="w-1.5 h-1.5 rounded-full bg-brand-blue shadow-[0_0_8px_rgba(59,130,246,0.6)]"
+                          ></span>
+                          Task 3 — Local Business Website Project
+                        </h5>
+                        <ul class="space-y-1.5 mt-2.5">
+                          <li
+                            class="text-[11px] text-slate-400 leading-relaxed font-sans flex items-start gap-1.5"
+                          >
+                            <svg
+                              class="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2.5"
+                                d="M5 13l4 4L19 7"
+                              ></path>
+                            </svg>
+                            <span
+                              >Création sur-mesure d'un site vitrine haut de
+                              gamme et responsive pour le compte d'une
+                              entreprise locale.</span
+                            >
+                          </li>
+
+                          <li
+                            class="text-[11px] text-slate-400 leading-relaxed font-sans flex items-start gap-1.5"
+                          >
+                            <svg
+                              class="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2.5"
+                                d="M5 13l4 4L19 7"
+                              ></path>
+                            </svg>
+                            <span
+                              >Modélisation UX/UI moderne mettant en avant
+                              l'identité sémantique et les forces commerciales
+                              du client.</span
+                            >
+                          </li>
+
+                          <li
+                            class="text-[11px] text-slate-400 leading-relaxed font-sans flex items-start gap-1.5"
+                          >
+                            <svg
+                              class="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2.5"
+                                d="M5 13l4 4L19 7"
+                              ></path>
+                            </svg>
+                            <span
+                              >Présentation physique et démonstration directe de
+                              la solution technique au propriétaire de
+                              l'établissement.</span
+                            >
+                          </li>
+
+                          <li
+                            class="text-[11px] text-slate-400 leading-relaxed font-sans flex items-start gap-1.5"
+                          >
+                            <svg
+                              class="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2.5"
+                                d="M5 13l4 4L19 7"
+                              ></path>
+                            </svg>
+                            <span
+                              >Mise en avant stratégique de la valeur
+                              commerciale ajoutée par la transformation digitale
+                              du commerce.</span
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bloc Réalisations Clés -->
+                <div class="mt-6 space-y-3">
+                  <h4
+                    class="text-[10px] uppercase font-bold tracking-widest font-mono text-slate-500"
+                  >
+                    Réalisations Clés
+                  </h4>
+                  <div
+                    class="grid grid-cols-1 sm:grid-cols-2 gap-3 bg-white/[0.01] border border-white/[0.03] p-4 rounded-xl"
+                  >
+                    <div
+                      class="flex items-start gap-2 text-xs text-slate-300 font-sans leading-relaxed"
+                    >
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500/15 text-emerald-400 shrink-0 mt-0.5"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="3"
+                            d="M5 13l4 4L19 7"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span
+                        >Conception et déploiement mondial d'un portfolio
+                        hautement interactif et performant accessible en
+                        ligne.</span
+                      >
+                    </div>
+
+                    <div
+                      class="flex items-start gap-2 text-xs text-slate-300 font-sans leading-relaxed"
+                    >
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500/15 text-emerald-400 shrink-0 mt-0.5"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="3"
+                            d="M5 13l4 4L19 7"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span
+                        >Mise en place d'une architecture de dépôts GitHub
+                        propre et documentée pour assurer le suivi d'équipe des
+                        projets.</span
+                      >
+                    </div>
+
+                    <div
+                      class="flex items-start gap-2 text-xs text-slate-300 font-sans leading-relaxed"
+                    >
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500/15 text-emerald-400 shrink-0 mt-0.5"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="3"
+                            d="M5 13l4 4L19 7"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span
+                        >Réalisation de projets informatiques complets de bout
+                        en bout répondant directement à des besoins réels du
+                        marché.</span
+                      >
+                    </div>
+
+                    <div
+                      class="flex items-start gap-2 text-xs text-slate-300 font-sans leading-relaxed"
+                    >
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500/15 text-emerald-400 shrink-0 mt-0.5"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="3"
+                            d="M5 13l4 4L19 7"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span
+                        >Adoption stricte des bonnes pratiques d'ingénierie
+                        logicielle (contrôle de version, documentation technique
+                        sémantique et clean code).</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Mots-clés des compétences & technologies -->
+                <div
+                  class="mt-6 pt-4 border-t border-white/[0.03] flex flex-wrap items-center gap-2"
+                >
+                  <span
+                    class="text-[10px] font-semibold text-slate-400 font-mono uppercase tracking-wider mr-1"
+                    >Techs &amp; compétences :</span
+                  >
+                  <div class="flex flex-wrap gap-1.5">
+                    <span
+                      class="text-[9px] font-mono bg-white/[0.03] hover:bg-brand-blue/10 hover:text-brand-blue border border-white/[0.05] hover:border-brand-blue/25 text-slate-300 px-2 py-0.5 rounded-md transition-colors duration-200 cursor-default"
+                      >HTML5</span
+                    >
+
+                    <span
+                      class="text-[9px] font-mono bg-white/[0.03] hover:bg-brand-blue/10 hover:text-brand-blue border border-white/[0.05] hover:border-brand-blue/25 text-slate-300 px-2 py-0.5 rounded-md transition-colors duration-200 cursor-default"
+                      >CSS3</span
+                    >
+
+                    <span
+                      class="text-[9px] font-mono bg-white/[0.03] hover:bg-brand-blue/10 hover:text-brand-blue border border-white/[0.05] hover:border-brand-blue/25 text-slate-300 px-2 py-0.5 rounded-md transition-colors duration-200 cursor-default"
+                      >JavaScript (ES6)</span
+                    >
+
+                    <span
+                      class="text-[9px] font-mono bg-white/[0.03] hover:bg-brand-blue/10 hover:text-brand-blue border border-white/[0.05] hover:border-brand-blue/25 text-slate-300 px-2 py-0.5 rounded-md transition-colors duration-200 cursor-default"
+                      >Responsive Design</span
+                    >
+
+                    <span
+                      class="text-[9px] font-mono bg-white/[0.03] hover:bg-brand-blue/10 hover:text-brand-blue border border-white/[0.05] hover:border-brand-blue/25 text-slate-300 px-2 py-0.5 rounded-md transition-colors duration-200 cursor-default"
+                      >UI/UX Design</span
+                    >
+
+                    <span
+                      class="text-[9px] font-mono bg-white/[0.03] hover:bg-brand-teal/10 hover:text-brand-teal border border-white/[0.05] hover:border-brand-teal/25 text-slate-400 px-2 py-0.5 rounded-md transition-colors duration-200 cursor-default"
+                      >Git</span
+                    >
+
+                    <span
+                      class="text-[9px] font-mono bg-white/[0.03] hover:bg-brand-teal/10 hover:text-brand-teal border border-white/[0.05] hover:border-brand-teal/25 text-slate-400 px-2 py-0.5 rounded-md transition-colors duration-200 cursor-default"
+                      >GitHub</span
+                    >
+
+                    <span
+                      class="text-[9px] font-mono bg-white/[0.03] hover:bg-brand-teal/10 hover:text-brand-teal border border-white/[0.05] hover:border-brand-teal/25 text-slate-400 px-2 py-0.5 rounded-md transition-colors duration-200 cursor-default"
+                      >VS Code Workflow</span
+                    >
+
+                    <span
+                      class="text-[9px] font-mono bg-white/[0.03] hover:bg-brand-teal/10 hover:text-brand-teal border border-white/[0.05] hover:border-brand-teal/25 text-slate-400 px-2 py-0.5 rounded-md transition-colors duration-200 cursor-default"
+                      >Gestion de projet technique</span
+                    >
+
+                    <span
+                      class="text-[9px] font-mono bg-white/[0.03] hover:bg-brand-teal/10 hover:text-brand-teal border border-white/[0.05] hover:border-brand-teal/25 text-slate-400 px-2 py-0.5 rounded-md transition-colors duration-200 cursor-default"
+                      >Qualité &amp; SEO</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -2302,7 +2900,7 @@
                     >
                       <path
                         d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1s2.5 1.12 2.5 2.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.1c.67-1.27 2.3-2.6 4.73-2.6 5.06 0 6 3.33 6 7.66V24h-5v-7.7c0-1.84-.03-4.2-2.56-4.2-2.57 0-2.96 2-2.96 4.07V24h-5V8z"
-                      />
+                      ></path>
                     </svg>
                   </div>
 
@@ -2419,7 +3017,7 @@
                       <input
                         type="text"
                         id="form-name"
-                        required
+                        required=""
                         placeholder="Ex. Wellness Corp"
                         class="w-full bg-white/[0.02] border border-white/[0.08] rounded-xl px-3 py-2.5 text-xs text-white placeholder-slate-600 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-all"
                       />
@@ -2433,7 +3031,7 @@
                       <input
                         type="text"
                         id="form-contact"
-                        required
+                        required=""
                         placeholder="Ex. info@corp.tg"
                         class="w-full bg-white/[0.02] border border-white/[0.08] rounded-xl px-3 py-2.5 text-xs text-white placeholder-slate-600 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-all"
                       />
@@ -2449,7 +3047,7 @@
                     <input
                       type="text"
                       id="form-subject"
-                      required
+                      required=""
                       placeholder="Ex. Opportunité de stage chez nous"
                       class="w-full bg-white/[0.02] border border-white/[0.08] rounded-xl px-3 py-2.5 text-xs text-white placeholder-slate-600 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-all"
                     />
@@ -2464,7 +3062,7 @@
                     <textarea
                       id="form-message"
                       rows="4"
-                      required
+                      required=""
                       placeholder="Décrivez votre besoin ou les modalités de stage proposées..."
                       class="w-full bg-white/[0.02] border border-white/[0.08] rounded-xl px-3 py-2.5 text-xs text-white placeholder-slate-600 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-all resize-none"
                     ></textarea>
@@ -2494,22 +3092,163 @@
     <!-- FLOATING CHAT / SUCCESS DIALOG -->
     <div
       id="toast"
-      class="fixed bottom-6 left-6 z-50 glass-panel border border-brand-blue/30 text-white text-xs font-semibold px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none"
+      class="fixed bottom-6 left-6 z-50 glass-panel border border-brand-blue/30 text-white text-xs font-semibold px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2 transform transition-all duration-300 opacity-100 translate-y-0"
     >
       <span class="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></span>
-      <span id="toast-text">Action effectuée</span>
+      <span id="toast-text"
+        >Fichier HTML autonome copié dans le presse-papiers!</span
+      >
     </div>
 
     <!-- UTILITY DRAWER: DEV TOOLBOX (A magnificent, student-focused tool) -->
-    <!-- <div
+    <div
       id="dev-toolbox-btn"
       class="fixed bottom-6 right-6 z-40 bg-slate-900 hover:bg-slate-800 border border-white/[0.06] hover:border-brand-blue/30 text-white p-3 rounded-xl shadow-2xl cursor-pointer hover:scale-105 transition-all text-xs font-mono font-bold flex items-center space-x-2"
     >
       <span class="w-2.5 h-2.5 rounded-full bg-brand-blue animate-pulse"></span>
       <span>🎓 Boîte à Outils Code</span>
-    </div> -->
+    </div>
 
     <!-- Dev Toolbox Drawer Modal -->
+    <div
+      id="dev-toolbox-drawer"
+      class="fixed inset-0 z-50 overflow-y-auto flex items-end justify-center p-4 bg-brand-dark/80 backdrop-blur-sm"
+    >
+      <div
+        class="relative w-full max-w-4xl rounded-t-2xl border border-white/[0.08] bg-slate-900 shadow-2xl p-6 max-h-[85vh] flex flex-col justify-between overflow-hidden"
+      >
+        <!-- Header -->
+        <div
+          class="flex items-center justify-between pb-4 border-b border-white/[0.05]"
+        >
+          <div class="flex items-center space-x-2">
+            <div class="w-2 h-2 rounded-full bg-brand-blue"></div>
+            <h3 class="font-display font-extrabold text-white text-base">
+              Espace Académique &amp; Exporte-Moi
+            </h3>
+          </div>
+          <button
+            id="close-drawer-btn"
+            class="text-slate-400 hover:text-white font-mono text-xs cursor-pointer"
+          >
+            Fermer [ESC]
+          </button>
+        </div>
+
+        <!-- Content -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-6 py-6 overflow-y-auto flex-1 min-h-[300px]"
+        >
+          <!-- Diagnostics & Mentoring -->
+          <div class="md:col-span-4 space-y-4 text-left">
+            <div
+              class="p-4 rounded-xl bg-white/[0.01] border border-white/[0.03] space-y-2"
+            >
+              <span
+                class="block text-[10px] font-mono text-[#60a5fa] font-bold uppercase tracking-wide"
+                >PÉDAGOGIE UX/UI</span
+              >
+              <h4 class="text-xs font-bold text-white">
+                Pourquoi cette structure ?
+              </h4>
+              <p class="text-[11px] text-slate-400 leading-relaxed">
+                Plutôt que des barres de progression clichés de 95% sans valeur,
+                nous listons les technologies avec des compétences
+                contextualisées (ex. <em>PHP: MVC Maison</em>) pour renforcer la
+                crédibilité d'un élève en L2.
+              </p>
+              <p class="text-[11px] text-slate-400 leading-relaxed">
+                Les expériences de direction événementielle d'église et de vente
+                de vêtements sont re-catégorisées en gestion de coûts et
+                leadership d'équipes pour accroître ton profil de stagiaire
+                autonome.
+              </p>
+            </div>
+
+            <div
+              class="p-4 rounded-xl bg-white/[0.01] border border-white/[0.03] space-y-2"
+            >
+              <span
+                class="block text-[10px] font-mono text-teal-400 font-bold uppercase tracking-wide font-semibold"
+                >TUTO DE DEPLOIEMENT</span
+              >
+              <h4 class="text-xs font-bold text-white">Où l'héberger seul ?</h4>
+              <p class="text-[11px] text-slate-400">
+                1. Navigue vers l'onglet <strong>Code Standalone</strong>.<br />
+                2. Copie l'intégralité du code d'un simple clic.<br />
+                3. Colle-le dans un fichier nommé <code>index.html</code>.<br />
+                4. Glisse-le sur
+                <a
+                  href="https://app.netlify.com/"
+                  target="_blank"
+                  class="text-teal-400 underline"
+                  >Netlify Drop</a
+                >
+                ou
+                <a
+                  href="https://pages.github.com/"
+                  target="_blank"
+                  class="text-teal-400 underline"
+                  >GitHub Pages</a
+                >
+                pour l'avoir en ligne gratuitement à vie!
+              </p>
+            </div>
+          </div>
+
+          <!-- Toolbox Tabbed Code block Exporter -->
+          <div
+            class="md:col-span-8 flex flex-col justify-between rounded-xl bg-slate-950 border border-white/[0.05] p-4 relative min-h-[250px] overflow-hidden"
+          >
+            <div
+              class="flex items-center justify-between pb-3 border-b border-white/[0.03] text-xs font-mono"
+            >
+              <span class="text-slate-400">standalone_portfolio.html</span>
+              <button
+                id="copy-standalone-btn"
+                class="px-3 py-1 rounded hover:bg-blue-600 text-white text-[11px] font-bold cursor-pointer transition-all bg-teal-600"
+              >
+                Code Source Copié ✓
+              </button>
+            </div>
+
+            <!-- Code viewer with actual zero-dependency code of this page -->
+            <pre
+              class="text-left font-mono text-[10px] text-slate-400 overflow-auto p-3 bg-slate-900 rounded-lg max-h-[300px] select-all mt-3"
+            >
+&lt;!-- Code autonome généré spécialement pour Agbanan Elise --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;AGBANAN ELISE | Développeur&lt;/title&gt;
+    &lt;!-- Tailwind Play CDN --&gt;
+    &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"&gt;
+    &lt;style&gt;
+        body { font-family: 'Inter', sans-serif; background-color: #070a13; color: #f1f5f9; }
+        .font-display { font-family: 'Space Grotesk', sans-serif; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;!-- Reste du code complet auto-généré disponible d'un simple clic --&gt;
+            </pre>
+
+            <span
+              class="block text-slate-500 font-mono text-[9px] pt-2 text-right"
+              >Zéro dépendances NPM nécessaires pour ce fichier final</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="border-t border-white/[0.05] pt-4 text-xs font-mono text-slate-500 flex justify-between"
+        >
+          <span>STATUT DU CODE : STABLE CLOUD</span>
+          <span>MODULAIRE ET PORTABLE</span>
+        </div>
+      </div>
+    </div>
 
     <!-- FOOTER -->
     <footer
@@ -2518,7 +3257,7 @@
       <div
         class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4"
       >
-        <span>&copy; 2026 AGBANAN AMENUVEVE ELISE. Tous droits réservés.</span>
+        <span>© 2026 AGBANAN AMENUVEVE ELISE. Tous droits réservés.</span>
         <div class="flex space-x-4">
           <a
             href="https://github.com/aelise-lia27"
@@ -2537,5 +3276,20 @@
     </footer>
 
     <!-- Bootstrapping Vite script entry -->
+
+    <veepn-lock-screen
+      ><style>
+        @font-face {
+          font-family: FigtreeVF;
+          src:
+            url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2)
+              format("woff2 supports variations"),
+            url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2)
+              format("woff2-variations");
+          font-weight: 100 1000;
+          font-display: swap;
+        }
+      </style></veepn-lock-screen
+    >
   </body>
 </html>
