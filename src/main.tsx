@@ -330,7 +330,7 @@ const EXPERIENCES_DATABASE: Experience[] = [
     dateDebut: "11 Juin 2026",
     dateFin: "11 Juillet 2026",
     localisation: "À distance",
-    cin: "FIT/JUN26/FS18610",
+    // cin: "FIT/JUN26/FS18610",
     logoText: "FI",
     logoBg: "from-blue-600 to-indigo-600",
     description: "Participation au programme international de stage de Future Interns en tant que stagiaire Full Stack Web Development. Réalisation de projets pratiques denses couvrant le développement de produits web modernes (conception d'interfaces utilisateurs animées, bases de données relationnelles, formulaires asynchrones et méthodologies de gestion de projets techniques).",
