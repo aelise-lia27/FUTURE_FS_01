@@ -13,6 +13,123 @@
   <body
     class="bg-brand-dark text-slate-100 font-sans antialiased min-h-screen selection:bg-brand-blue selection:text-white tech-glow overflow-x-hidden"
   >
+    <!-- PRELOADER -->
+    <div
+      id="page-preloader"
+      class="fixed inset-0 bg-[#070a13] z-[9999] flex flex-col items-center justify-center transition-all duration-700 ease-in-out"
+    >
+      <div
+        class="flex flex-col items-center max-w-xs px-6 text-center space-y-6"
+      >
+        <!-- Logo Icon with Spinning Outer Aura -->
+        <div class="relative w-24 h-24 flex items-center justify-center">
+          <!-- Outer Spinning Ring -->
+          <div
+            class="absolute inset-0 rounded-2xl border-2 border-brand-blue/10 border-t-brand-blue animate-spin [animation-duration:1000ms]"
+          ></div>
+          <!-- Secondary reverse spinning ring for complexity -->
+          <div
+            class="absolute inset-2 rounded-xl border border-brand-teal/5 border-b-brand-teal/40 animate-spin [animation-duration:1500ms] [animation-direction:reverse]"
+          ></div>
+          <!-- Center Text -->
+          <div
+            class="font-display font-black text-white text-2xl tracking-tighter"
+          >
+            AE
+          </div>
+        </div>
+
+        <!-- Text Indicator with typing/pulse vibe -->
+        <div class="space-y-3">
+          <div
+            id="preloader-text"
+            class="font-mono text-[10px] uppercase tracking-[0.2em] text-[#60a5fa] font-semibold"
+          >
+            Initialisation...
+          </div>
+          <!-- Progress bar track -->
+          <div
+            class="w-40 h-[2px] bg-white/[0.04] rounded-full overflow-hidden relative mx-auto"
+          >
+            <div
+              id="preloader-bar"
+              class="absolute top-0 left-0 h-full w-[0%] bg-gradient-to-r from-brand-blue to-brand-teal rounded-full transition-all duration-300 ease-out"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        // Prevent body scrolling while loading
+        document.body.classList.add("overflow-y-hidden");
+
+        const bar = document.getElementById("preloader-bar");
+        const text = document.getElementById("preloader-text");
+        const phrases = [
+          "Chargement de l'interface...",
+          "Connexion aux modules...",
+          "Optimisation du responsive...",
+          "Prêt !",
+        ];
+
+        let progress = 0;
+        let phraseIdx = 0;
+
+        function updateProgress(target, speed, next) {
+          const interval = setInterval(function () {
+            if (progress < target) {
+              progress += Math.floor(Math.random() * 4) + 1;
+              if (progress > target) progress = target;
+              if (bar) bar.style.width = progress + "%";
+
+              // Change phrase dynamically based on milestones
+              if (progress > 30 && phraseIdx === 0) {
+                phraseIdx = 1;
+                if (text) text.innerText = phrases[phraseIdx];
+              } else if (progress > 65 && phraseIdx === 1) {
+                phraseIdx = 2;
+                if (text) text.innerText = phrases[phraseIdx];
+              }
+            } else {
+              clearInterval(interval);
+              if (next) next();
+            }
+          }, speed);
+        }
+
+        // Start loading sequence
+        updateProgress(45, 15, function () {
+          updateProgress(85, 25, null);
+        });
+
+        // Expose function to complete it
+        window.completePreloader = function () {
+          updateProgress(100, 5, function () {
+            if (text) text.innerText = phrases[3];
+            setTimeout(function () {
+              const preloader = document.getElementById("page-preloader");
+              if (preloader) {
+                preloader.classList.add("opacity-0", "pointer-events-none");
+                // Remove scroll lock
+                document.body.classList.remove("overflow-y-hidden");
+                setTimeout(function () {
+                  preloader.remove();
+                }, 700);
+              }
+            }, 300);
+          });
+        };
+
+        // Failsafe of 4.5 seconds to make sure the app is always accessible
+        setTimeout(function () {
+          if (typeof window.completePreloader === "function") {
+            window.completePreloader();
+          }
+        }, 4500);
+      })();
+    </script>
     <!-- NAVIGATION BAR -->
     <header
       id="navbar"

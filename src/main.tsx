@@ -377,6 +377,18 @@ const EXPERIENCES_DATABASE: Experience[] = [
 ];
 
 // 2. LAUNCH CONTROLLER ON COMPLETE DOM LOAD
+// document.addEventListener("DOMContentLoaded", () => {
+//   initNavbarScroll();
+//   initMobileMenu();
+//   initSkillsFilter();
+//   initProjectsFilter();
+//   initProjectModals();
+//   initExperiences();
+//   initContactForm();
+//   initEmailCopy();
+//   initDevToolbox();
+// });
+// 2. LAUNCH CONTROLLER ON COMPLETE DOM LOAD
 document.addEventListener("DOMContentLoaded", () => {
   initNavbarScroll();
   initMobileMenu();
@@ -387,6 +399,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
   initEmailCopy();
   initDevToolbox();
+
+  // Complete preloader gracefully once core components are initialized
+  if (typeof (window as any).completePreloader === 'function') {
+    (window as any).completePreloader();
+  }
 });
 
 // NAVIGATION ADJUSTMENT ON WINDOW SCROLL
